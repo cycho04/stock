@@ -1,7 +1,12 @@
 import { combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form'; // the form key value in the combineReducer has to be exactly as is.
+import companyInfoReducer from './companyInfoReducer';
+import quoteInfoReducer from './quoteInfoReducer';
+import financialInfoReducer from './financialInfoReducer';
+import newsReducer from './newsReducer';
 
 export default combineReducers({
-    temp: () => 'temp',
-    form: formReducer
-})
+    company: companyInfoReducer,
+    quote: quoteInfoReducer,
+    financial: financialInfoReducer,
+    news: newsReducer
+});

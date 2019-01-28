@@ -1,21 +1,19 @@
-import React from 'react';
+import React from "react";
 
-import Chart from './Chart';
-import Description from './Description';
-import Header from './Header';
-import Search from './Search';
+import StockSearch from './StockSearch';
+import StockDetails from './StockDetails';
+import MainDisplay from './MainDisplay';
 
 class App extends React.Component {
     render(){
-        return (
-            <div className='ui container'>
-                <Header />
-                <Search />
-                <Chart />
-                <Description />
+        return(
+            <div className= 'ui container'>
+                <StockSearch />
+                <MainDisplay />
+                <StockDetails />
             </div>
         )
-    };
+    }
 };
 
 export default App;
