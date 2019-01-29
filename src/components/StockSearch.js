@@ -1,15 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews } from '../actions';
+import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages } from '../actions';
 
 class StockSearch extends React.Component {
 
     componentDidMount(){
-        this.props.fetchCompanyInfo('AAPL');
-        this.props.fetchFinancialInfo('AAPL');
-        this.props.fetchQuoteInfo('AAPL');
-        this.props.fetchNews('AAPL');
+        const stock = 'CAT';
+        this.props.fetchCompanyInfo(stock);
+        this.props.fetchFinancialInfo(stock);
+        this.props.fetchQuoteInfo(stock);
+        this.props.fetchNews(stock);
+        this.props.fetchImages(10);
     }
 
     render(){
@@ -22,4 +24,4 @@ class StockSearch extends React.Component {
 };
 
 
-export default connect(null, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews })(StockSearch);
+export default connect(null, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages })(StockSearch);

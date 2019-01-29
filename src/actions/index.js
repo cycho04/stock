@@ -1,4 +1,5 @@
 import IEX from '../apis/IEX';
+import unsplash from '../apis/unsplash';
 
 export const fetchCompanyInfo = (data) => async dispatch => {
     const companyInfo = await IEX.get(`/stock/${data}/company`);
@@ -35,3 +36,16 @@ export const fetchNews = (data) => async dispatch => {
         payload: newsInfo.data
     })
 }
+
+export const fetchImages = (num) => async dispatch => {
+    const images = await unsplash.get('/photos/random', {
+        params: {
+            query: 'workspace',
+            count: num
+        }
+    })
+    dispatch({
+        type: 'IMAGES',
+        payload: images
+    })
+};
