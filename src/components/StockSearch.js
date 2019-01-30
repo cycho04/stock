@@ -1,12 +1,24 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { Field, reduxForm } from 'redux-form';
 
+import { connect } from 'react-redux';
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages } from '../actions';
 
 class StockSearch extends React.Component {
+    renderInput = (formProps) => {
+        return(
+            <div>
+                <input 
+                    {...formProps.input}
+                    placeholder='Search Stocks'
+                    autoComplete='off'
+                />    
+            </div>
+        )
+    }
 
-    componentDidMount(){
-        const stock = 'CAT';
+    onSubmit = (formValues) => {
+        const stock = formValues.stockSymbol;
         this.props.fetchCompanyInfo(stock);
         this.props.fetchFinancialInfo(stock);
         this.props.fetchQuoteInfo(stock);
@@ -15,13 +27,30 @@ class StockSearch extends React.Component {
     }
 
     render(){
+        
         return(
-            <form className='ui form'>
-                <input placeholder='Search Stocks' />
+            <form 
+                className='ui form'
+                onSubmit={this.props.handleSubmit(this.onSubmit)}
+            >
+                <Field 
+                    name='stockSymbol' 
+                    component={this.renderInput} 
+                />
+                <button className='ui button primary'>Search</button>
             </form>
         )
     }
 };
 
+const mapStateToProps = state => {
+    return {
+        state: state
+    }
+}
 
-export default connect(null, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages })(StockSearch);
+const needConnectToo = connect(mapStateToProps, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages })(StockSearch)
+
+export default reduxForm({
+    form: 'stockSearch'
+})(needConnectToo);

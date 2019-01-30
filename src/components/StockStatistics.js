@@ -9,21 +9,21 @@ const StockStatistics = props => {
         <div className='ui segment'>
             <h3>Statistics</h3>
             <ul>
-                <li>Open: {quoteInfo.open}</li>
-                <li>Close: {quoteInfo.close}</li>
-                <li>High: {quoteInfo.high}</li>
-                <li>Low: {quoteInfo.low}</li>
-                <li>Latest Price: {quoteInfo.latestPrice}</li>
-                <li>Latest Source: {quoteInfo.latestSource}</li>
-                <li>Latest Volume: {quoteInfo.latestVolume}</li>
-                <li>Previous Close: {quoteInfo.previousClose}</li>
-                <li>Change: {quoteInfo.change}</li>
-                <li>Change %: {quoteInfo.changePercent}</li>
-                <li>Market Cap: {quoteInfo.marketCap}</li>
-                <li>P/E Ratio: {quoteInfo.peRatio}</li>
-                <li>Week 52 High: {quoteInfo.week52High}</li>
-                <li>Week 52 Low: {quoteInfo.week52Low}</li>
-                <li>Year to Date Change: {quoteInfo.ytdChange}</li>
+                <li className="ui teal image label">Open: <div className="detail">{quoteInfo.open}</div></li>
+                <li className="ui teal image label">Close: <div className="detail">{quoteInfo.close}</div></li>
+                <li className="ui teal image label">High: <div className="detail">{quoteInfo.high}</div></li>
+                <li className="ui teal image label">Low: <div className="detail">{quoteInfo.low}</div></li>
+                <li className="ui teal image label">Latest Price: <div className="detail">{quoteInfo.latestPrice}</div></li>
+                <li className="ui teal image label">Latest Source: <div className="detail">{quoteInfo.latestSource}</div></li>
+                <li className="ui teal image label">Latest Volume: <div className="detail">{quoteInfo.latestVolume}</div></li>
+                <li className="ui teal image label">Previous Close: <div className="detail">{quoteInfo.previousClose}</div></li>
+                <li className="ui teal image label">Change: <div className="detail">{quoteInfo.change}</div></li>
+                <li className="ui teal image label">Change %: <div className="detail">{quoteInfo.changePercent}</div></li>
+                <li className="ui teal image label">Market Cap: <div className="detail">{quoteInfo.marketCap}</div></li>
+                <li className="ui teal image label">P/E Ratio: <div className="detail">{quoteInfo.peRatio}</div></li>
+                <li className="ui teal image label">Week 52 High: <div className="detail">{quoteInfo.week52High}</div></li>
+                <li className="ui teal image label">Week 52 Low: <div className="detail">{quoteInfo.week52Low}</div></li>
+                <li className="ui teal image label">Year to Date Change: <div className="detail">{quoteInfo.ytdChange}</div></li>
             </ul>
         </div>
     )
