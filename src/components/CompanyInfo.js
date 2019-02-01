@@ -7,7 +7,6 @@ const CompanyInfo = props => {
 
     return(
         <div className='ui segment'>
-            <h2>Company Info</h2>
             <ul>
                 <li>Company Name = {companyInfo.companyName}</li>
                 <li>exchange = {companyInfo.exchange}</li>

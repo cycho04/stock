@@ -9,25 +9,25 @@ const FinancialInfo = props => {
         <div className='ui segment'>
             <h2>Financial Info</h2>
             <ul>
-                <li>Report Date = {financialInfo.reportDate}</li>
-                <li>Gross Profit = {financialInfo.grossProfit}</li>
-                <li>Cost of Revenue = {financialInfo.costOfRevenue}</li>
-                <li>Operating Revenue = {financialInfo.operatingRevenue}</li>
-                <li>Total Revenue = {financialInfo.totalRevenue}</li>
-                <li>Operating Income = {financialInfo.operatingIncome}</li>
-                <li>Net Income = {financialInfo.netIncome}</li>
-                <li>Research and Development = {financialInfo.researchAndDevelopment}</li>
-                <li>Operating Expense = {financialInfo.operatingExpense}</li>
-                <li>Current Assests = {financialInfo.currentAssets}</li>
-                <li>Total Assests = {financialInfo.totalAssets}</li>
-                <li>Total Liabilities = {financialInfo.totalLiabilities}</li>
-                <li>Current Cash = {financialInfo.currentCash}</li>
-                <li>Current Debt = {financialInfo.currentDebt}</li>
-                <li>Total Cash = {financialInfo.totalCash}</li>
-                <li>Total Debt = {financialInfo.totalDebt}</li>
-                <li>Shareholder Equity = {financialInfo.shareholderEquity}</li>
-                <li>cash Change = {financialInfo.cashChange}</li>
-                <li>Cash Flow = {financialInfo.cashFlow}</li>
+                <li className="ui teal image label">Report Date = <div className="detail">{financialInfo.reportDate}</div></li>
+                <li className="ui teal image label">Gross Profit = <div className="detail">{financialInfo.grossProfit}</div></li>
+                <li className="ui teal image label">Cost of Revenue = <div className="detail">{financialInfo.costOfRevenue}</div></li>
+                <li className="ui teal image label">Operating Revenue = <div className="detail">{financialInfo.operatingRevenue}</div></li>
+                <li className="ui teal image label">Total Revenue = <div className="detail">{financialInfo.totalRevenue}</div></li>
+                <li className="ui teal image label">Operating Income = <div className="detail">{financialInfo.operatingIncome}</div></li>
+                <li className="ui teal image label">Net Income = <div className="detail">{financialInfo.netIncome}</div></li>
+                <li className="ui teal image label">Research and Development = <div className="detail">{financialInfo.researchAndDevelopment}</div></li>
+                <li className="ui teal image label">Operating Expense = <div className="detail">{financialInfo.operatingExpense}</div></li>
+                <li className="ui teal image label">Current Assests = <div className="detail">{financialInfo.currentAssets}</div></li>
+                <li className="ui teal image label">Total Assests = <div className="detail">{financialInfo.totalAssets}</div></li>
+                <li className="ui teal image label">Total Liabilities = <div className="detail">{financialInfo.totalLiabilities}</div></li>
+                <li className="ui teal image label">Current Cash = <div className="detail">{financialInfo.currentCash}</div></li>
+                <li className="ui teal image label">Current Debt = <div className="detail">{financialInfo.currentDebt}</div></li>
+                <li className="ui teal image label">Total Cash = <div className="detail">{financialInfo.totalCash}</div></li>
+                <li className="ui teal image label">Total Debt = <div className="detail">{financialInfo.totalDebt}</div></li>
+                <li className="ui teal image label">Shareholder Equity = <div className="detail">{financialInfo.shareholderEquity}</div></li>
+                <li className="ui teal image label">cash Change = <div className="detail">{financialInfo.cashChange}</div></li>
+                <li className="ui teal image label">Cash Flow = <div className="detail">{financialInfo.cashFlow}</div></li>
             </ul>
         </div>
     )

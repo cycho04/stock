@@ -9,9 +9,9 @@ import DisplayNews from './DisplayNews';
 const StockDetails = () => {
     return(
         <div>
+            <CompanyInfo />
             <StockStatistics />
             <DisplayNews />
-            <CompanyInfo />
             <FinancialInfo />
         </div>
     )
