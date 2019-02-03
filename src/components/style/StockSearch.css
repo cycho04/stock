@@ -1,0 +1,22 @@
+.up {
+    color: #008000 !important;
+}
+
+.down {
+    color: #ff0000 !important;
+}
+
+.companyName {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.banner {
+    background-color: #e0e0e0;
+    font-family: 'Staatliches', cursive;
+}
+
+.test {
+    margin-top: 5px;
+    color: #008000 !important
+}

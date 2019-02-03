@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import StockSearch from './StockSearch';
 import StockDetails from './StockDetails';
 import MainDisplay from './MainDisplay';
+import Footer from './Footer';
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages } from '../actions';
 
 class App extends React.Component {
@@ -18,10 +19,13 @@ class App extends React.Component {
 
     render(){
         return(
-            <div className= 'ui container'>
+            <div>
                 <StockSearch />
-                <MainDisplay />
-                <StockDetails />
+                <div className= 'ui container'>    
+                    <MainDisplay />
+                    <StockDetails />
+                </div>    
+                <Footer />
             </div>
         )
     }

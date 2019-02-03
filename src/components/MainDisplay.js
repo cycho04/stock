@@ -3,10 +3,13 @@ import { connect } from 'react-redux';
 import './style/MainDisplay.css';
 
 const MainDisplay = (props) => {
+
+    const upOrDown = props.change >= 0 ? 'up' : 'down';
+
     return(
-        <div className='ui segment center'>
-            <h3>{props.symbol}</h3>
-            <h1>$ {props.price}</h1>
+        <div className={`ui raised segment center ${upOrDown}`}>
+            <div><span className='large'>{props.state.company.company.companyName}</span>|<span>{props.symbol}</span></div>
+            <h1 className='largePrice'>$ {props.price}</h1>
             <h3>{props.change} ({props.changePercent}%)</h3>
         </div>
     )
@@ -17,7 +20,8 @@ const mapStateToProps = state => {
         symbol: state.quote.quote.symbol,
         price: state.quote.quote.latestPrice,
         change: state.quote.quote.change,
-        changePercent: state.quote.quote.changePercent
+        changePercent: state.quote.quote.changePercent,
+        state: state
     }
 }
 
