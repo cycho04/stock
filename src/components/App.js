@@ -5,7 +5,7 @@ import StockSearch from './StockSearch';
 import StockDetails from './StockDetails';
 import MainDisplay from './MainDisplay';
 import Footer from './Footer';
-import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages } from '../actions';
+import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchSymbols } from '../actions';
 
 class App extends React.Component {
     componentDidMount(){
@@ -15,6 +15,7 @@ class App extends React.Component {
         this.props.fetchQuoteInfo(stock);
         this.props.fetchNews(stock);
         this.props.fetchImages(10);
+        this.props.fetchSymbols();
     }
 
     render(){
@@ -36,4 +37,4 @@ const mapStateToProps = state => {
         state: state
     }
 }
-export default connect(mapStateToProps, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages })(App);
+export default connect(mapStateToProps, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchSymbols })(App);

@@ -3,7 +3,8 @@ import { connect } from  'react-redux';
 
 const FinancialInfo = props => {
 
-    const financialInfo = props.state.financial.financial.financials[0];
+    //added conditional, for etfs and other stocks with no financial info, else error
+    const financialInfo = props.state.financial.financial.financials ? props.state.financial.financial.financials[0] : '';
 
     return(
         <div className='ui raised segment'>

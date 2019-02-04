@@ -4,6 +4,7 @@ import quoteInfoReducer from './quoteInfoReducer';
 import financialInfoReducer from './financialInfoReducer';
 import newsReducer from './newsReducer';
 import imageReducer from './imageReducer';
+import symbolsReducer from './symbolsReducer';
 import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
@@ -12,5 +13,6 @@ export default combineReducers({
     financial: financialInfoReducer,
     news: newsReducer,
     images: imageReducer,
-    form: formReducer
+    form: formReducer,
+    symbols: symbolsReducer
 });

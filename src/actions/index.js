@@ -49,3 +49,11 @@ export const fetchImages = (num) => async dispatch => {
         payload: images
     })
 };
+
+export const fetchSymbols = () => async dispatch => {
+    const symbols = await IEX.get('/ref-data/symbols');
+    dispatch({
+        type: 'SYMBOLS',
+        payload: symbols
+    })
+}
