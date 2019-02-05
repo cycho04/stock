@@ -5,6 +5,7 @@ import StockSearch from './StockSearch';
 import StockDetails from './StockDetails';
 import MainDisplay from './MainDisplay';
 import Footer from './Footer';
+import FeaturedStocks from  './FeaturedStocks';
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchSymbols } from '../actions';
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
         return(
             <div>
                 <StockSearch />
+                <FeaturedStocks />
                 <div className= 'ui container'>    
                     <MainDisplay />
                     <StockDetails />

@@ -21,7 +21,6 @@ class StockSearch extends React.Component {
     }
 
     onSubmit = (formValues) => {
-        console.log(formValues)
         const stock = formValues.stockSymbol.toUpperCase(); //the stock symbol given by user
         const availableStocks = this.props.state.symbols.symbols.data; //array of all the stocks provided by IEX. Use .symbol to access each stock's symbol. +8000 stocks.
         const realStock = availableStocks.find((el) => el.symbol === stock) // If the stock symbol doesnt exist, it is undefined, else an object.
@@ -70,7 +69,7 @@ const mapStateToProps = state => {
 
 const validate = (formValues) => {
     const errors ={};
-    console.log(formValues.stockSymbol);
+    console.log('validation needs fix');
 }
 
 const needConnectToo = connect(mapStateToProps, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages })(StockSearch)
