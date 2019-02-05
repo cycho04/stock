@@ -8,9 +8,16 @@ const FeaturedStocks = props => {
     
     if(props.state.symbols.symbols){
         const stockLength = Math.floor(Math.random() * props.state.symbols.symbols.data.length);
-        console.log(props.state.symbols.symbols.data[stockLength]);
+        const randomStock = props.state.symbols.symbols.data[stockLength]
+
+        return (
+            <div>
+                {randomStock.name}
+                {randomStock.symbol}
+            </div>
+        )
     }
-    // const randomStock = Math.random() * props.state.
+    
     return <div>Featured</div>
 }
 

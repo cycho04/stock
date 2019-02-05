@@ -5,12 +5,13 @@ import './style/MainDisplay.css';
 const MainDisplay = (props) => {
 
     const upOrDown = props.change >= 0 ? 'up' : 'down';
+    const plusSign = props.change >= 0 ? '+' : '';
 
     return(
         <div className={`ui raised segment center ${upOrDown}`}>
             <div><span className='large'>{props.state.company.company.companyName}</span>|<span>{props.symbol}</span></div>
             <h1 className='largePrice'>$ {props.price}</h1>
-            <h3>{props.change} ({props.changePercent}%)</h3>
+            <h3>{plusSign}{props.change} ({plusSign}{props.changePercent}%)</h3>
         </div>
     )
 };

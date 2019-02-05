@@ -8,7 +8,7 @@ const DisplayNews = props => {
 
     return(
         <div className='ui raised segments'>
-            <a className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Recent News</a>
+            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Recent News</div>
             {news.map((article, i) => 
                 <div key={article.url} className='ui segment'>
                     <a href={article.url} target='_blank'>

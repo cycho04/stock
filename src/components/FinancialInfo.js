@@ -8,7 +8,7 @@ const FinancialInfo = props => {
 
     return(
         <div className='ui raised segment'>
-            <a className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Financial Info</a>
+            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Financial Info</div>
             <ul>
                 <li className="ui blue image label">Report Date = <div className="detail">{financialInfo.reportDate}</div></li>
                 <li className="ui blue image label">Gross Profit = <div className="detail">{financialInfo.grossProfit}</div></li>

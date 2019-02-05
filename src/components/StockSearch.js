@@ -21,19 +21,21 @@ class StockSearch extends React.Component {
     }
 
     onSubmit = (formValues) => {
-        const stock = formValues.stockSymbol.toUpperCase(); //the stock symbol given by user
-        const availableStocks = this.props.state.symbols.symbols.data; //array of all the stocks provided by IEX. Use .symbol to access each stock's symbol. +8000 stocks.
-        const realStock = availableStocks.find((el) => el.symbol === stock) // If the stock symbol doesnt exist, it is undefined, else an object.
+        //check for blank submission.
+        if(formValues.stockSymbol){
+            const stock = formValues.stockSymbol.toUpperCase(); //the stock symbol given by user
+            const availableStocks = this.props.state.symbols.symbols.data; //array of all the stocks provided by IEX. Use .symbol to access each stock's symbol. +8000 stocks.
+            const realStock = availableStocks.find((el) => el.symbol === stock) // If the stock symbol doesnt exist, it is undefined, else an object.
 
-        this.props.fetchCompanyInfo(stock);
-        this.props.fetchFinancialInfo(stock);
-        this.props.fetchQuoteInfo(stock);
-        this.props.fetchNews(stock);
-        this.props.fetchImages(10);
-        
-        
-        if(!realStock){
-            console.log('does not exist')
+            this.props.fetchCompanyInfo(stock);
+            this.props.fetchFinancialInfo(stock);
+            this.props.fetchQuoteInfo(stock);
+            this.props.fetchNews(stock);
+            this.props.fetchImages(10); 
+            
+            if(!realStock){
+                console.log('does not exist')
+            }
         }
     };
 
@@ -51,7 +53,7 @@ class StockSearch extends React.Component {
                         name='stockSymbol' 
                         component={this.renderInput} 
                     />
-                    <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'test' : 'red'}`}>Search</button>
+                    <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`}>Search</button>
                 </form>    
                 <div className={`four wide column ${this.props.state.quote.quote.change >= 0 ? 'up' : 'down'}`}>
                     <Calendar />

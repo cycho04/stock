@@ -7,7 +7,7 @@ const StockStatistics = props => {
 
     return (
         <div className='ui raised segment'>
-            <a className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Statistics</a>
+            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Statistics</div>
                 <div className="ui black image label">Open: <div className="detail">{quoteInfo.open}</div></div>
                 <div className="ui black image label">Close: <div className="detail">{quoteInfo.close}</div></div>
                 <div className="ui black image label">High: <div className="detail">{quoteInfo.high}</div></div>
