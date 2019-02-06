@@ -56,12 +56,10 @@ export const fetchSymbols = () => async dispatch => {
         type: 'SYMBOLS',
         payload: symbols
     })
-    dispatch(() => console.log('look in actions folder for randomStock fix'))
-}
-
-export const chooseRandomStock = randomStock => {
-    return({
+    //dispatches a second action, insteadof its own action creator to prevent over fetching. else times out.
+    dispatch({
         type: 'RANDOM',
-        payload: randomStock
+        payload: symbols.data.length
     })
+    dispatch(() => console.log('here'))
 }

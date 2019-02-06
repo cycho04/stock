@@ -9,10 +9,13 @@ import './style/StockSearch.css';
 class StockSearch extends React.Component {
     
     renderInput = (formProps) => {
+        console.log(formProps)
         return(
                 <div>
                     <input 
-                        {...formProps.input}
+                        onChange={formProps.input.onChange}
+                        name={formProps.input.name}
+                        value={formProps.input.value}
                         placeholder='Search Stocks'
                         autoComplete='off'
                     />    
