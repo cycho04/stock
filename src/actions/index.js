@@ -56,4 +56,12 @@ export const fetchSymbols = () => async dispatch => {
         type: 'SYMBOLS',
         payload: symbols
     })
+    dispatch(() => console.log('look in actions folder for randomStock fix'))
+}
+
+export const chooseRandomStock = randomStock => {
+    return({
+        type: 'RANDOM',
+        payload: randomStock
+    })
 }

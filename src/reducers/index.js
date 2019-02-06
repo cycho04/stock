@@ -5,6 +5,7 @@ import financialInfoReducer from './financialInfoReducer';
 import newsReducer from './newsReducer';
 import imageReducer from './imageReducer';
 import symbolsReducer from './symbolsReducer';
+import randomReducer from './randomReducer';
 import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
@@ -14,5 +15,6 @@ export default combineReducers({
     news: newsReducer,
     images: imageReducer,
     form: formReducer,
-    symbols: symbolsReducer
+    symbols: symbolsReducer,
+    random: randomReducer
 });
