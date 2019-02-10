@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from  'react-redux';
+import './style/CompanyInfo.css';
 
 const CompanyInfo = props => {
 
     const companyInfo = props.state.company.company;
 
     return(
-        <div className='ui raised segment'>
+        <div className='ui raised companyinfo segment'>
             <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>About</div>
             <div className='center'>
                 <div>{companyInfo.industry}</div>

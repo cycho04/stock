@@ -1,3 +1,9 @@
 .center {
     text-align: center;
 }
+
+.companyinfo {
+ background-color: #474B4F !important;
+ color: #EDEAE5 !important;
+ margin-top: 1.0em !important;
+}

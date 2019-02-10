@@ -1,7 +1,8 @@
 .footer {
-    background-color: black;
-    color: white;
+    background-color: #474B4F;
+    color: #EDEAE5;
     text-align: center;
     height: 10vh;
-    font-size: 1.5vw;
+    font-size: 2.0em;
+    padding-top: 1.0em;
 }

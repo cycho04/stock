@@ -16,13 +16,16 @@ const FeaturedStocks = props => {
     const arr = generateRandomNumbers(props);
     if(arr && props.state.symbols.symbols){     
         return (
-            <div>
-                {arr.map((x) => (
-                    <div>
-                        <div>{props.state.symbols.symbols.data[x].name}</div>
-                        <div>{props.state.symbols.symbols.data[x].symbol}</div>   
-                    </div>
-                ))}
+            <div className='ui grid'>
+                <div className='five column row'>
+                    {arr.map((x) => (
+                        <div className='column'>
+                            <div>{props.state.symbols.symbols.data[x].name}</div>
+                            <div>{props.state.symbols.symbols.data[x].symbol}</div>   
+                        </div>
+                    ))}
+                </div>
+                
             </div>     
         )       
     }

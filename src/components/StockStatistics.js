@@ -1,27 +1,69 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import './style/StockStatistics.css'
+
 const StockStatistics = props => {
 
     const quoteInfo = props.state.quote.quote;
 
     return (
-        <div className='ui raised segment'>
+        <div className='ui raised stockstatistics segment'>
             <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Statistics</div>
-                <div className="ui black image label">Open: <div className="detail">{quoteInfo.open}</div></div>
-                <div className="ui black image label">Close: <div className="detail">{quoteInfo.close}</div></div>
-                <div className="ui black image label">High: <div className="detail">{quoteInfo.high}</div></div>
-                <div className="ui black image label">Low: <div className="detail">{quoteInfo.low}</div></div>
-                <div className="ui black image label">Latest Source: <div className="detail">{quoteInfo.latestSource}</div></div>
-                <div className="ui black image label">Latest Volume: <div className="detail">{quoteInfo.latestVolume}</div></div>
-                <div className="ui black image label">Previous Close: <div className="detail">{quoteInfo.previousClose}</div></div>
-                <div className="ui black image label">Change: <div className="detail">{quoteInfo.change}</div></div>
-                <div className="ui black image label">Change %: <div className="detail">{quoteInfo.changePercent}</div></div>
-                <div className="ui black image label">Market Cap: <div className="detail">{quoteInfo.marketCap}</div></div>
-                <div className="ui black image label">P/E Ratio: <div className="detail">{quoteInfo.peRatio}</div></div>
-                <div className="ui black image label">Week 52 High: <div className="detail">{quoteInfo.week52High}</div></div>
-                <div className="ui black image label">Week 52 Low: <div className="detail">{quoteInfo.week52Low}</div></div>
-                <div className="ui black image label">Year to Date Change: <div className="detail">{quoteInfo.ytdChange}</div></div>
+
+                <table className='ui single line stockstatistics table' align='center'>
+                    <thead>
+                        <tr>
+                            <th className='stockstatistics' colspan='4'>
+                                Report Date - 'Need Fix'
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Open</td>
+                        <td>{quoteInfo.open}</td>
+                        <td>Close</td>
+                        <td>{quoteInfo.close}</td>
+                    </tr>
+                    <tr>
+                        <td>High</td>
+                        <td>{quoteInfo.high}</td>
+                        <td>Low</td>
+                        <td>{quoteInfo.low}</td>
+                    </tr>
+                    <tr>
+                        <td>Latest Source</td>
+                        <td>{quoteInfo.latestSource}</td>
+                        <td>Latest Volume</td>
+                        <td>{quoteInfo.latestVolume}</td>
+                    </tr>
+                    <tr>
+                        <td>Previous Close</td>
+                        <td>{quoteInfo.previousClose}</td>
+                        <td>Change</td>
+                        <td>{quoteInfo.change}</td>
+                    </tr>
+                    <tr>
+                        <td>Change %</td>
+                        <td>{quoteInfo.changePercent}</td>
+                        <td>P/E Ratio</td>
+                        <td>{quoteInfo.peRatio}</td>
+                    </tr>
+                    <tr>
+                        <td>Week 52 Low</td>
+                        <td>{quoteInfo.week52Low}</td>
+                        <td>Week 52 High</td>
+                        <td>{quoteInfo.week52High}</td>
+                    </tr>
+                    <tr>
+                        <td>Market Cap</td>
+                        <td>{quoteInfo.marketCap}</td>
+                        <td>Year to Date Change</td>
+                        <td>{quoteInfo.ytdChange}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     )
 };

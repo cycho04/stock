@@ -1,5 +1,10 @@
 .center {
     text-align: center;
+    
+}
+.maindisplay {
+    background-color: #222626 !important;
+    margin-top: 1.0em !important;
 }
 
 .up {
