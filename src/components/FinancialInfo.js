@@ -14,7 +14,7 @@ const FinancialInfo = props => {
             <table className='ui single line financialinfo table' align='center'>
             <thead>
                 <tr>
-                    <th className='financialinfo' colspan='4'>
+                    <th className='financialinfo' colSpan='4'>
                         Report Date - {financialInfo.reportDate}
                     </th>
                 </tr>

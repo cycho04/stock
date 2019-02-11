@@ -14,7 +14,7 @@ const StockStatistics = props => {
                 <table className='ui single line stockstatistics table' align='center'>
                     <thead>
                         <tr>
-                            <th className='stockstatistics' colspan='4'>
+                            <th className='stockstatistics' colSpan='4'>
                                 Report Date - 'Need Fix'
                             </th>
                         </tr>

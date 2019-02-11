@@ -5,6 +5,7 @@
 .maindisplay {
     background-color: #222626 !important;
     margin-top: 1.0em !important;
+    border: none !important;
 }
 
 .up {

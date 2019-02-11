@@ -6,6 +6,7 @@ import newsReducer from './newsReducer';
 import imageReducer from './imageReducer';
 import symbolsReducer from './symbolsReducer';
 import randomReducer from './randomReducer';
+import chartReducer from './chartReducer';
 import { reducer as formReducer } from 'redux-form';
 
 export default combineReducers({
@@ -16,5 +17,6 @@ export default combineReducers({
     images: imageReducer,
     form: formReducer,
     symbols: symbolsReducer,
-    random: randomReducer
+    random: randomReducer,
+    chart: chartReducer
 });

@@ -63,3 +63,11 @@ export const fetchSymbols = () => async dispatch => {
     })
     dispatch(() => console.log('here'))
 }
+
+export const fetchChartInfo = symbol => async dispatch => {
+    const chartInfo = await IEX.get(`/stock/${symbol}/chart/1m`);
+    dispatch({ 
+        type: 'CHART',
+        payload: chartInfo.data
+    })
+}

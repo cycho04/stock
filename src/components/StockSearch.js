@@ -3,7 +3,7 @@ import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
 import Calendar from './Calendar';
-import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages } from '../actions';
+import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchChartInfo } from '../actions';
 import './style/StockSearch.css';
 
 class StockSearch extends React.Component {
@@ -35,6 +35,7 @@ class StockSearch extends React.Component {
             this.props.fetchQuoteInfo(stock);
             this.props.fetchNews(stock);
             this.props.fetchImages(10); 
+            this.props.fetchChartInfo(stock);
             
             if(!realStock){
                 console.log('does not exist')
@@ -77,7 +78,7 @@ const validate = (formValues) => {
     console.log('validation needs fix');
 }
 
-const needConnectToo = connect(mapStateToProps, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages })(StockSearch)
+const needConnectToo = connect(mapStateToProps, { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchChartInfo })(StockSearch)
 
 export default reduxForm({
     form: 'stockSearch',
