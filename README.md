@@ -1,6 +1,6 @@
 ## Stocks!
 
-- Live Demo:
+- Live Demo: [Stock App](https://my-stocks.herokuapp.com/)
 
 ### User Options
 
