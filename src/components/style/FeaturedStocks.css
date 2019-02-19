@@ -1,0 +1,15 @@
+.center {
+    text-align: center;
+}
+
+.transparent {
+    background-color: #222626 !important;
+    margin-top: 0 !important;
+    border-style: none !important;
+}
+
+.overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

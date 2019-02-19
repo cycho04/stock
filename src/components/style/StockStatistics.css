@@ -1,4 +1,11 @@
 .stockstatistics {
-    background: #474B4F !important;
+    background: #333333 !important;
     color: #EDEAE5 !important;
+}
+
+td {
+    border: none !important;
+}
+table {
+    border: none !important;
 }

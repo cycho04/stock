@@ -13,9 +13,7 @@ class StockSearch extends React.Component {
         return(
                 <div>
                     <input 
-                        onChange={formProps.input.onChange}
-                        name={formProps.input.name}
-                        value={formProps.input.value}
+                        {...formProps.input}
                         placeholder='Search Stocks'
                         autoComplete='off'
                     />    

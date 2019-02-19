@@ -50,18 +50,21 @@ export const fetchImages = (num) => async dispatch => {
     })
 };
 
-export const fetchSymbols = () => async dispatch => {
-    const symbols = await IEX.get('/ref-data/symbols');
-    dispatch({
+export const fetchSymbols = (x, y) => async dispatch => {
+    await IEX.get('/ref-data/symbols')
+    .then((symbols) => dispatch({
         type: 'SYMBOLS',
         payload: symbols
-    })
-    //dispatches a second action, insteadof its own action creator to prevent over fetching. else times out.
-    dispatch({
+    }))
+    .then((symbols) => dispatch({
         type: 'RANDOM',
-        payload: symbols.data.length
-    })
-    dispatch(() => console.log('here'))
+        payload: symbols.payload.data.length - 1
+    }))
+    .then((symbols) => dispatch({
+        type: 'RANDOM_NUMBERS',
+        payload: y(symbols.payload)
+    }))
+    //dispatches a second action, insteadof its own action creator to prevent over fetching. else times out.
 }
 
 export const fetchChartInfo = symbol => async dispatch => {
@@ -71,3 +74,5 @@ export const fetchChartInfo = symbol => async dispatch => {
         payload: chartInfo.data
     })
 }
+
+

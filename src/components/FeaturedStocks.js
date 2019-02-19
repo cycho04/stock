@@ -1,35 +1,35 @@
 import React from 'react';
 import { connect } from  'react-redux';
 
-const generateRandomNumbers = props => {
-    let randomNums = [];
-    for (let i = 0; i < 5; i++){
-        const randomNumber = Math.floor(Math.random() * props.state.random);
-        randomNums = [...randomNums, randomNumber];
-    }
-    console.log(randomNums);
-    return randomNums;
-}
+import './style/FeaturedStocks.css';
+
 
 
 const FeaturedStocks = props => {
-    const arr = generateRandomNumbers(props);
-    if(arr && props.state.symbols.symbols){     
+    //randomNumber is an array with a single element of an array of 5 elements.[[1,2,3,4,5]]
+    const arr = props.state.randomNumber[0];
+    //need to check if arr exists(before api call randomNumber doesn't exist), thus check for undefined
+    if(arr !== undefined && props.state.symbols.symbols){   
         return (
-            <div className='ui grid'>
-                <div className='five column row'>
-                    {arr.map((x) => (
-                        <div className='column'>
-                            <div>{props.state.symbols.symbols.data[x].name}</div>
-                            <div>{props.state.symbols.symbols.data[x].symbol}</div>   
+            <div className='ui segment transparent'> 
+                <div className='ui five column grid'>
+                    {arr.map((randomNum, i) => (
+                        <div key={i} className='column'>
+                            <div className='ui fluid card center'>
+                                <div className='content'>
+                                    <div className='header'>{props.state.symbols.symbols.data[randomNum].symbol}<i className='angle double down icon'/></div> 
+                                    <div className='description overflow'>{props.state.symbols.symbols.data[randomNum].name}</div>
+                                </div>    
+                            </div>
+                            
                         </div>
                     ))}
-                </div>
-                
-            </div>     
+                </div>   
+            </div>
+                  
         )       
     }
-    return <div>hi</div>
+    return <div>Loading...</div>
 }
 
 const mapStateToProps = state => {

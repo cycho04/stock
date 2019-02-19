@@ -5,6 +5,14 @@ import './style/StockStatistics.css'
 
 const StockStatistics = props => {
 
+    //used to display N/A if no data
+    const noValue = value => {
+        if (value){
+            return `$ ${value}`;
+        }
+        return <div>N/A</div>;
+    }
+
     const quoteInfo = props.state.quote.quote;
 
     return (
@@ -22,45 +30,45 @@ const StockStatistics = props => {
                     <tbody>
                     <tr>
                         <td>Open</td>
-                        <td>{quoteInfo.open}</td>
+                        <td>{noValue(quoteInfo.open)}</td>
                         <td>Close</td>
-                        <td>{quoteInfo.close}</td>
+                        <td>{noValue(quoteInfo.close)}</td>
                     </tr>
                     <tr>
                         <td>High</td>
-                        <td>{quoteInfo.high}</td>
+                        <td>{noValue(quoteInfo.high)}</td>
                         <td>Low</td>
-                        <td>{quoteInfo.low}</td>
+                        <td>{noValue(quoteInfo.low)}</td>
                     </tr>
                     <tr>
                         <td>Latest Source</td>
-                        <td>{quoteInfo.latestSource}</td>
+                        <td>{noValue(quoteInfo.latestSource)}</td>
                         <td>Latest Volume</td>
-                        <td>{quoteInfo.latestVolume}</td>
+                        <td>{noValue(quoteInfo.latestVolume)}</td>
                     </tr>
                     <tr>
                         <td>Previous Close</td>
-                        <td>{quoteInfo.previousClose}</td>
+                        <td>{noValue(quoteInfo.previousClose)}</td>
                         <td>Change</td>
-                        <td>{quoteInfo.change}</td>
+                        <td>{noValue(quoteInfo.change)}</td>
                     </tr>
                     <tr>
                         <td>Change %</td>
-                        <td>{quoteInfo.changePercent}</td>
+                        <td>{noValue(quoteInfo.changePercent)}</td>
                         <td>P/E Ratio</td>
-                        <td>{quoteInfo.peRatio}</td>
+                        <td>{noValue(quoteInfo.peRatio)}</td>
                     </tr>
                     <tr>
                         <td>Week 52 Low</td>
-                        <td>{quoteInfo.week52Low}</td>
+                        <td>{noValue(quoteInfo.week52Low)}</td>
                         <td>Week 52 High</td>
-                        <td>{quoteInfo.week52High}</td>
+                        <td>{noValue(quoteInfo.week52High)}</td>
                     </tr>
                     <tr>
                         <td>Market Cap</td>
-                        <td>{quoteInfo.marketCap}</td>
+                        <td>{noValue(quoteInfo.marketCap)}</td>
                         <td>Year to Date Change</td>
-                        <td>{quoteInfo.ytdChange}</td>
+                        <td>{noValue(quoteInfo.ytdChange)}</td>
                     </tr>
                 </tbody>
             </table>

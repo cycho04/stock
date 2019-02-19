@@ -5,6 +5,14 @@ import './style/FinancialInfo.css';
 
 const FinancialInfo = props => {
 
+    //used to display N/A if no financial data
+    const noValue = value => {
+        if (value){
+            return `$ ${value}`;
+        }
+        return <div>N/A</div>;
+    }
+
     //added conditional, for etfs and other stocks with no financial info, else error
     const financialInfo = props.state.financial.financial.financials ? props.state.financial.financial.financials[0] : '';
 
@@ -22,57 +30,57 @@ const FinancialInfo = props => {
                 <tbody>
                     <tr>
                         <td>Cash Flow </td>
-                        <td>{financialInfo.cashFlow}</td>
+                        <td>{noValue(financialInfo.cashFlow)}</td>
                         <td>Gross Profit </td>
-                        <td>{financialInfo.grossProfit}</td>
+                        <td>{noValue(financialInfo.grossProfit)}</td>
                     </tr>
                     <tr>
                         <td>Cost of Revenue </td>
-                        <td>{financialInfo.costOfRevenue}</td>
+                        <td>{noValue(financialInfo.costOfRevenue)}</td>
                         <td>Operating Revenue </td>
-                        <td>{financialInfo.operatingRevenue}</td>
+                        <td>{noValue(financialInfo.operatingRevenue)}</td>
                     </tr>
                     <tr>
                         <td>Total Revenue </td>
-                        <td>{financialInfo.totalRevenue}</td>
+                        <td>{noValue(financialInfo.totalRevenue)}</td>
                         <td>Operating Income </td>
-                        <td>{financialInfo.operatingIncome}</td>
+                        <td>{noValue(financialInfo.operatingIncome)}</td>
                     </tr>
                     <tr>
                         <td>Net Income</td>
-                        <td>{financialInfo.netIncome}</td>
+                        <td>{noValue(financialInfo.netIncome)}</td>
                         <td>Research and Development</td>
-                        <td>{financialInfo.researchAndDevelopment}</td>
+                        <td>{noValue(financialInfo.researchAndDevelopment)}</td>
                     </tr>
                     <tr>
                         <td>Operating Expense</td>
-                        <td>{financialInfo.operatingExpense}</td>
+                        <td>{noValue(financialInfo.operatingExpense)}</td>
                         <td>Current Assests</td>
-                        <td>{financialInfo.currentAssets}</td>
+                        <td>{noValue(financialInfo.currentAssets)}</td>
                     </tr>
                     <tr>
                         <td>Total Assests</td>
-                        <td>{financialInfo.totalAssets}</td>
+                        <td>{noValue(financialInfo.totalAssets)}</td>
                         <td>Total Liabilities</td>
-                        <td>{financialInfo.totalLiabilities}</td>
+                        <td>{noValue(financialInfo.totalLiabilities)}</td>
                     </tr>
                     <tr>
                         <td>Current Cash </td>
-                        <td>{financialInfo.currentCash}</td>
+                        <td>{noValue(financialInfo.currentCash)}</td>
                         <td>Current Debt</td>
-                        <td>{financialInfo.currentDebt}</td>
+                        <td>{noValue(financialInfo.currentDebt)}</td>
                     </tr>
                     <tr>
                         <td>Total Cash</td>
-                        <td>{financialInfo.totalCash}</td>
+                        <td>{noValue(financialInfo.totalCash)}</td>
                         <td>Total Debt</td>
-                        <td>{financialInfo.totalDebt}</td>
+                        <td>{noValue(financialInfo.totalDebt)}</td>
                     </tr>
                     <tr>
                         <td>Shareholder Equity </td>
-                        <td>{financialInfo.shareholderEquity}</td>
+                        <td>{noValue(financialInfo.shareholderEquity)}</td>
                         <td>cash Change </td>
-                        <td>{financialInfo.cashChange}</td>
+                        <td>{noValue(financialInfo.cashChange)}</td>
                     </tr>
                 </tbody>
             </table>

@@ -18,8 +18,17 @@ class App extends React.Component {
         this.props.fetchQuoteInfo(stock);
         this.props.fetchNews(stock);
         this.props.fetchImages(10);
-        this.props.fetchSymbols();
+        this.props.fetchSymbols(this.props, this.generateRandomNumbers);
         this.props.fetchChartInfo(stock);
+    }
+
+    generateRandomNumbers = props => {
+        let randomNums = [];
+        for (let i = 0; i < 5; i++){
+            const randomNumber = Math.floor(Math.random() * props);
+            randomNums = [...randomNums, randomNumber];
+        }
+        return randomNums;
     }
 
     render(){
