@@ -3,7 +3,7 @@
 }
 
 .transparent {
-    background-color: #222626 !important;
+    background-color: transparent !important;
     margin-top: 0 !important;
     border-style: none !important;
 }
@@ -12,4 +12,9 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.individual {
+    background-color: transparent !important;
+    color: white !important;
 }

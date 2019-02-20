@@ -45,10 +45,10 @@ class StockSearch extends React.Component {
     render(){
         return(
             <div className='ui padded grid banner'>
-                <div className='four wide column'>       
+                <div className='six wide column'>       
                 </div>
                 <form 
-                    className='ui form eight wide column'
+                    className='ui form four wide column'
                     onSubmit={this.props.handleSubmit(this.onSubmit)}
                 >
                     <Field 
@@ -57,7 +57,7 @@ class StockSearch extends React.Component {
                     />
                     <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`}>Search</button>
                 </form>    
-                <div className={`four wide column ${this.props.state.quote.quote.change >= 0 ? 'up' : 'down'}`}>
+                <div className={`six wide column ${this.props.state.quote.quote.change >= 0 ? 'up' : 'down'}`}>
                     <Calendar />
                 </div>
             </div>

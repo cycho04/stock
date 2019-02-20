@@ -34,8 +34,8 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-                <StockSearch />
                 <FeaturedStocks />
+                <StockSearch />
                 <div className= 'ui container'>    
                     <MainDisplay />
                     <Chart />

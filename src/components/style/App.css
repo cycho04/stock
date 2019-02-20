@@ -1,4 +1,16 @@
 .app {
-    background-color: #222626;
+    background-image: linear-gradient(to left, #ffd89b , #19547b);
     color: #6B6E70;
 }
+
+
+
+/*
+colors for negative
+
+    background-image: linear-gradient(to right, #3a1c71 , #d76d77 , #ffaf7b);
+#F05F57, #360940 
+
+colors for positive
+#ffd89b , #19547b
+*/

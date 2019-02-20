@@ -12,7 +12,7 @@ const Chart = props => {
             datasets: [
                 {
                     label: "My First dataset",
-                    fillColor: "#222626",
+                    fillColor: "transparent",
                     strokeColor: "green",
                     pointColor: "green",
                     pointStrokeColor: "#fff",
