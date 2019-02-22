@@ -3,7 +3,57 @@
     color: #6B6E70;
 }
 
+.false {
+    transition: 1s;
+    opacity: 100%;
+}
 
+
+.true {
+    transition: 1s;
+    opacity: 0;
+}
+
+
+.test2-appear {
+    opacity: 0;
+    z-index: 1;
+}
+.test-appear.test2-appear-active {
+    opacity: 1;
+    transition: all 500ms ease-out;
+}
+.test2-exit {
+    opacity: 1;
+    height: 100px;
+}
+.test2-exit.test2-exit-active {
+    opacity: 0;
+    height: 0;
+    transition: all 500ms ease-in;
+}
+
+.test2-exit-done {
+    opacity: 0;
+}
+
+.test2-enter-done {
+    opacity: 1;
+    height: 100px;
+}
+
+
+.test2-enter {
+    opacity: 0;
+    height: 0;
+    z-index: 1;
+}
+
+.test2-enter.test2-enter-active {
+    opacity: 1;
+    height: 100px;
+    transition: all 500ms linear;
+}
 
 /*
 colors for negative
