@@ -8,9 +8,11 @@ const StockStatistics = props => {
     //used to display N/A if no data
     const noValue = value => {
         if (value){
-            return `$ ${value}`;
+            return Number(value).toLocaleString();
         }
-        return <div>N/A</div>;
+        if(Number(value).toLocaleString() === NaN){
+            return <div>N/A</div>;    
+        }
     }
 
     const quoteInfo = props.state.quote.quote;
@@ -42,7 +44,7 @@ const StockStatistics = props => {
                     </tr>
                     <tr>
                         <td>Latest Source</td>
-                        <td>{noValue(quoteInfo.latestSource)}</td>
+                        <td>{quoteInfo.latestSource}</td>
                         <td>Latest Volume</td>
                         <td>{noValue(quoteInfo.latestVolume)}</td>
                     </tr>

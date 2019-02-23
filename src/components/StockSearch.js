@@ -2,7 +2,6 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
-import Calendar from './Calendar';
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchChartInfo } from '../actions';
 import './style/StockSearch.css';
 
@@ -58,7 +57,6 @@ class StockSearch extends React.Component {
                     <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`}>Search</button>
                 </form>    
                 <div className={`six wide column ${this.props.state.quote.quote.change >= 0 ? 'up' : 'down'}`}>
-                    <Calendar />
                 </div>
             </div>
         )

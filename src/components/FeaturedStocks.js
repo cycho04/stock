@@ -15,10 +15,10 @@ const FeaturedStocks = props => {
                 <div className='ui five column grid'>
                     {arr.map((randomNum, i) => (
                         <div key={i} className='column'>
-                            <div className='ui fluid card center individual'>
+                            <div className='ui fluid card center individual' onClick={props.animation}>
                                 <div className='content'>
                                     <div className='header individual'>{props.state.symbols.symbols.data[randomNum].symbol}<i className='angle double down icon'/></div> 
-                                    <div className='description overflow individual'>{props.state.symbols.symbols.data[randomNum].name}</div>
+                                    <div className='description overflow individual'>{props.state.symbols.symbols.data[randomNum].name ? props.state.symbols.symbols.data[randomNum].name : 'N/A'}</div>
                                 </div>    
                             </div>
                             

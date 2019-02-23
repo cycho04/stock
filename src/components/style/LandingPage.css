@@ -1,0 +1,35 @@
+
+.landing-page-appear {
+    opacity: 0;
+    height: 100vh !important;
+}
+.landing-page-appear.landing-page-appear-active {
+    opacity: 1;
+    height: 100vh !important;
+    transition: all 1000ms linear;
+}
+.landing-page-enter-done {
+    opacity: 1;
+    height: 100vh !important;
+}
+.landing-page-enter {
+    opacity: 0;
+    height: 100vh;
+}
+.landing-page-enter.landing-page-enter-active {
+    opacity: 1;
+    height: 100vh !important;
+    transition: all 1000ms linear;
+}
+.landing-page-exit {
+    opacity: 1;
+    height: 100vh !important;
+}
+.landing-page-exit.landing-page-exit-active {
+    height: 25vh !important;
+    border: none;
+    transition: all 1000ms linear;
+}
+.landing-page-exit-done {
+    height: 25vh !important;
+}

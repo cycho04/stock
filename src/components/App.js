@@ -2,19 +2,20 @@ import React from "react";
 import { connect } from 'react-redux';
 
 import Chart from './Chart';
-import StockSearch from './StockSearch';
 import StockDetails from './StockDetails';
 import MainDisplay from './MainDisplay';
 import Footer from './Footer';
-import FeaturedStocks from  './FeaturedStocks';
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchSymbols, fetchChartInfo } from '../actions';
 import './style/App.css';
 import { CSSTransition } from 'react-transition-group';
+
+import LandingPage from './LandingPage';
+
 import Test from './Test';
 
 class App extends React.Component {
     //for transition purposes
-    state={ clicked: false }
+    state={ landingPage: true }
 
     componentDidMount(){
         const stock = 'AAPL'
@@ -28,7 +29,7 @@ class App extends React.Component {
     }
 
     animation = () => {
-        this.setState({ clicked: !this.state.clicked })
+        this.setState({ landingPage: !this.state.landingPage })
     }
 
     generateRandomNumbers = props => {
@@ -43,12 +44,7 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-                <CSSTransition in={this.state.clicked} classNames='test2' appear timeout={500} unmountOnExit>
-                    <Test />
-                </CSSTransition>
-                <div onClick={this.animation} className={this.state.clicked ? 'false' : 'true'}>Testing</div>
-                <FeaturedStocks />
-                <StockSearch />
+                <LandingPage landingPage={this.state.landingPage} animation={this.animation}/>
                 <div className= 'ui container'>    
                     <MainDisplay />
                     <Chart />
