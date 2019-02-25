@@ -1,0 +1,29 @@
+.body-page-appear {
+    opacity: 0;
+}
+.body-page-appear.body-page-appear-active {
+    opacity: 1;
+    transition: all 1500ms linear;
+}
+
+.body-page-enter {
+    opacity: 0;
+}
+.body-page-enter.body-page-enter-active {
+    opacity: 1;
+    transition: all 1500ms linear;
+}
+.body-page-enter-done {
+    opacity: 1;
+}
+
+.body-page-exit {
+    opacity: 0;
+}
+.body-page-exit.body-page-exit-active {
+    opacity: 1;
+    transition: all 1500ms linear;
+}
+.body-page-exit-done {
+    opacity: 1;
+}

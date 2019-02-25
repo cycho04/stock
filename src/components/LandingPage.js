@@ -12,12 +12,15 @@ class LandingPage extends React.Component {
                 in={this.props.landingPage} 
                 classNames='landing-page' 
                 appear 
-                timeout={1000}
+                timeout={1500}
             >
-                <div className='landing-page'>
-                    <FeaturedStocks animation={this.props.animation}/>
-                    <Calendar />
-                    <StockSearch animation={this.props.animation}/>
+                <div className='landing-page parent'>
+                    <div className='child'>
+                        <FeaturedStocks initialAnimation={this.props.initialAnimation}/>
+                        <Calendar />
+                        <StockSearch initialAnimation={this.props.initialAnimation}/>    
+                    </div>
+                    
                 </div>    
             </CSSTransition>
         )

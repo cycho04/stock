@@ -1,7 +1,22 @@
-.app {
+/* all three used to keep the entire app background same color */
+html {
     background-image: linear-gradient(to left, #ffd89b , #19547b);
     color: #6B6E70;
 }
+body {
+    background-image: linear-gradient(to left, #ffd89b , #19547b);
+    color: #6B6E70;
+}
+
+.app {
+    background-image: linear-gradient(to left, #ffd89b , #19547b);
+    color: #6B6E70;
+    height: 100vh !important;
+}
+
+
+
+
 
 .false {
     transition: 1s;

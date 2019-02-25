@@ -1,13 +1,10 @@
 import React from "react";
 import { connect } from 'react-redux';
 
-import Chart from './Chart';
-import StockDetails from './StockDetails';
-import MainDisplay from './MainDisplay';
-import Footer from './Footer';
+
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchSymbols, fetchChartInfo } from '../actions';
 import './style/App.css';
-import { CSSTransition } from 'react-transition-group';
+import Body from './Body';
 
 import LandingPage from './LandingPage';
 
@@ -28,7 +25,7 @@ class App extends React.Component {
         this.props.fetchChartInfo(stock);
     }
 
-    animation = () => {
+    initialAnimation = () => {
         this.setState({ landingPage: !this.state.landingPage })
     }
 
@@ -44,13 +41,10 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-                <LandingPage landingPage={this.state.landingPage} animation={this.animation}/>
-                <div className= 'ui container'>    
-                    <MainDisplay />
-                    <Chart />
-                    <StockDetails />
-                </div>    
-                <Footer />
+                <LandingPage landingPage={this.state.landingPage} initialAnimation={this.initialAnimation}/>
+                   
+                {!this.state.landingPage ? <Body landingPage={this.state.landingPage}/> : <div></div>}
+               
             </div>
         )
     }

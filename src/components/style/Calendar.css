@@ -1,0 +1,13 @@
+.timer {
+    text-align: center !important;
+    font-size: 3.0em !important;
+    line-height: 1.0em !important;
+    color: red !important;
+}
+
+.market {
+    text-align: center !important;
+    font-size: 3.0em !important;
+    line-height: 1.0em !important;
+    color: black !important;
+}

@@ -75,4 +75,11 @@ export const fetchChartInfo = symbol => async dispatch => {
     })
 }
 
+export const getTime = (time) => {
+    return {
+        type: 'TIME',
+        payload: time
+    }
+}
+
 

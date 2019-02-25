@@ -8,7 +8,6 @@ import './style/StockSearch.css';
 class StockSearch extends React.Component {
     
     renderInput = (formProps) => {
-        console.log(formProps)
         return(
                 <div>
                     <input 
@@ -54,7 +53,7 @@ class StockSearch extends React.Component {
                         name='stockSymbol' 
                         component={this.renderInput} 
                     />
-                    <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`}>Search</button>
+                    <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`} onClick={this.props.initialAnimation}>Search</button>
                 </form>    
                 <div className={`six wide column ${this.props.state.quote.quote.change >= 0 ? 'up' : 'down'}`}>
                 </div>

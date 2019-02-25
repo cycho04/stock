@@ -6,6 +6,7 @@
     background-color: transparent !important;
     margin-top: 0 !important;
     border-style: none !important;
+    
 }
 
 .overflow {
@@ -17,4 +18,8 @@
 .individual {
     background-color: transparent !important;
     color: white !important;
+}
+
+.grid {
+    border-style: none !important;
 }

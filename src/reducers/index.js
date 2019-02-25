@@ -9,6 +9,7 @@ import randomReducer from './randomReducer';
 import chartReducer from './chartReducer';
 import randomNumberReducer from './randomNumberReducer';
 import { reducer as formReducer } from 'redux-form';
+import timeReducer from './timeReducer';
 
 export default combineReducers({
     company: companyInfoReducer,
@@ -20,5 +21,6 @@ export default combineReducers({
     symbols: symbolsReducer,
     random: randomReducer,
     chart: chartReducer,
-    randomNumber: randomNumberReducer
+    randomNumber: randomNumberReducer,
+    time: timeReducer
 });
