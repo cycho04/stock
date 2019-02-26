@@ -1,17 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getTime } from '../actions';
 
 import './style/Calendar.css';
 
 
 class Calendar extends React.Component {
 
+    state = { time : '' }
+
     //timer
     componentDidMount(){
         setInterval(() => {
             const time = new Date().toLocaleTimeString();
-            this.props.getTime(time);
+            this.setState(() => {
+               return {time: time} 
+            });
         }, 1000)
     }
 
@@ -26,7 +29,7 @@ class Calendar extends React.Component {
         return(
             <div>
                 <div className='timer'>
-                    {this.props.state.time}
+                    {this.state.time}
                 </div>
                 <div className='market'>
                     Market is currently {this.openOrClosed(this.props.state.quote.quote.latestSource)}
@@ -40,4 +43,4 @@ const mapStateToProps = state => {
     return { state: state }
 }
 
-export default connect(mapStateToProps, { getTime })(Calendar);
+export default connect(mapStateToProps)(Calendar);

@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "chart.js": "^1.1.1",
     "react": "^16.7.0",
+    "react-autocomplete": "^1.8.1",
     "react-chartjs": "^1.2.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",

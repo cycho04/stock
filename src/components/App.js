@@ -24,6 +24,7 @@ class App extends React.Component {
         this.props.fetchSymbols(this.props, this.generateRandomNumbers);
         this.props.fetchChartInfo(stock);
     }
+    
 
     initialAnimation = () => {
         this.setState({ landingPage: !this.state.landingPage })
