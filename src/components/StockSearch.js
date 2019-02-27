@@ -1,46 +1,16 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import Autocomplete from 'react-autocomplete';
+
 
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchChartInfo } from '../actions';
 import './style/StockSearch.css';
+import AutoCompleteWrapper from './AutoCompleteWrapper';
 
 class StockSearch extends React.Component {
     
-    renderInput = (formProps) => {
-        return(
-                <div>
-                    <input 
-                        {...formProps.input}
-                        placeholder='Search Stocks'
-                        autoComplete='off'
-                    />    
-                </div>
-        )
-    }
-    testRenderInput = () => {
-        const value =''
-        return(
-                <Autocomplete
-                getItemValue={(item) => item.label}
-                items={[
-                  { label: 'apple' },
-                  { label: 'banana' },
-                  { label: 'pear' }
-                ]}
-                renderItem={(item, isHighlighted) =>
-                    <div style={{ background: isHighlighted ? 'lightgray' : 'white' }}>
-                    {item.label}
-                    </div>
-                }
-                value={value}
-                onChange={(e) => value = e.target.value}
-                onSelect={(val) => value = val}
-                menuStyle={ {'position': 'relative', 'overflow': 'none'} }
-                />
-        )
-    }
+
+    renderInput = formProps => <AutoCompleteWrapper formProps={formProps}/>;
 
     onSubmit = (formValues) => {
         //check for blank submission.
@@ -74,7 +44,7 @@ class StockSearch extends React.Component {
                 >
                     <Field 
                         name='stockSymbol' 
-                        component={this.testRenderInput} 
+                        component={this.renderInput} 
                     />
                     <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`} onClick={this.props.initialAnimation}>Search</button>
                 </form>    

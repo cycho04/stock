@@ -6,10 +6,6 @@ import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchI
 
 class OneFeaturedStock extends React.Component {
 
-    shouldComponentUpdate(){
-        console.log('OneFeaturedStock.js')
-    }
-
     handleClick = () => {
         const stock = this.props.state.symbols.symbols.data[this.props.randomNum].symbol;
         this.props.fetchCompanyInfo(stock);

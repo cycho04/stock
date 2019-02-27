@@ -3,9 +3,9 @@
 }
 
 .companyinfo {
- background-image: linear-gradient(to left, #a73737 , #712828) !important;
- /* background-color: transparent !important; */
- color: white !important;
+    background-color: transparent !important;
+ border: 2px black solid !important;
+ color: black !important;
  margin-top: 1.0em !important;
 }
 

@@ -7,6 +7,7 @@ import './style/App.css';
 import Body from './Body';
 
 import LandingPage from './LandingPage';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Test from './Test';
 
@@ -42,10 +43,9 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-                <LandingPage landingPage={this.state.landingPage} initialAnimation={this.initialAnimation}/>
-                   
-                {!this.state.landingPage ? <Body landingPage={this.state.landingPage}/> : <div></div>}
-               
+             
+                    <LandingPage landingPage={this.state.landingPage} initialAnimation={this.initialAnimation}/>
+                    {!this.state.landingPage ? <Body landingPage={this.state.landingPage}/> : <div></div>}
             </div>
         )
     }

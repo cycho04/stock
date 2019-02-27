@@ -15,7 +15,7 @@ const FeaturedStocks = props => {
             <div className='ui segment transparent'> 
                 <div className='ui five column grid'>
                     {arr.map((randomNum, i) => (
-                        <OneFeaturedStock randomNum={randomNum} i ={i} initialAnimation={props.initialAnimation}/>
+                        <OneFeaturedStock key={i} randomNum={randomNum} i ={i} initialAnimation={props.initialAnimation}/>
                     ))}
                 </div>   
             </div>

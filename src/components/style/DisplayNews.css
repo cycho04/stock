@@ -1,7 +1,7 @@
-.displaynews {
-    background-image: linear-gradient(to left, #141e30 , #243b55) !important;
-    color: white !important;
-    border: none !important;
+.segment {
+    background-color: transparent !important;
+ border: 2px black solid !important;
+ color: black !important;
     
 }
 

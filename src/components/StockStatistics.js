@@ -19,7 +19,7 @@ const StockStatistics = props => {
 
     return (
         <div className='ui raised stockstatistics segment'>
-            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Statistics</div>
+            <div className={`ui black ribbon label`}>Statistics</div>
 
                 <table className='ui single line stockstatistics table' align='center'>
                     <thead>

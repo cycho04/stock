@@ -1,7 +1,7 @@
 .stockstatistics {
-    background-image: linear-gradient(to left, #141e30 , #243b55) !important;
-    /* background-color: transparent !important; */
-    color: white !important;
+    background-color: transparent !important;
+ border: 2px black solid !important;
+ color: black !important;
 }
 
 td {

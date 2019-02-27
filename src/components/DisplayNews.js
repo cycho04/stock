@@ -10,7 +10,7 @@ const DisplayNews = props => {
     
     return(
         <div className='ui raised displaynews segment'>
-            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Recent News</div>
+            <div className={`ui black ribbon label`}>Recent News</div>
             <div className='ui displaynews segment'>
                 <div className='ui divided link items'>
                     {news.map((article, i) => 

@@ -17,7 +17,8 @@ const FinancialInfo = props => {
     const financialInfo = props.state.financial.financial.financials ? props.state.financial.financial.financials[0] : '';
     return(
         <div className='ui raised financialinfo main segment'>
-            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>Financial Info</div>
+        {/* ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} */}
+            <div className={`ui black ribbon label`}>Financial Info</div> 
             <table className='ui single line financialinfo table' align='center'>
             <thead>
                 <tr>

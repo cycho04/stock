@@ -8,7 +8,7 @@ const CompanyInfo = props => {
 
     return(
         <div className='ui raised companyinfo segment'>
-            <div className={`ui ${props.state.quote.quote.change >= 0 ? 'green' : 'red'} ribbon label`}>About</div>
+            <div className={`ui black ribbon label`}>About</div>
             <div className='center'>
                 <div>{companyInfo.industry}</div>
                 <div>{companyInfo.exchange}</div>  
