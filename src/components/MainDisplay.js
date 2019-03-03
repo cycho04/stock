@@ -11,8 +11,8 @@ const MainDisplay = (props) => {
         <div className={`ui segment center maindisplay ${upOrDown}`}>
             <div><span className='large'>{props.state.company.company.companyName}</span></div>
             <div>{props.symbol}</div>
-            <h1 className='largePrice'>$ {props.price}</h1>
-            <h3>{plusSign}{props.change} ({plusSign}{props.changePercent}%)</h3>
+            <h1 className='largePrice'>$ {(props.price).toFixed(2)}</h1>
+            <h3>{plusSign}{(props.change).toFixed(3)} ({plusSign}{(props.changePercent).toFixed(3)}%)</h3>
         </div>
     )
 };

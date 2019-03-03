@@ -28,7 +28,9 @@ class App extends React.Component {
     
 
     initialAnimation = () => {
-        this.setState({ landingPage: !this.state.landingPage })
+        if(this.state.landingPage === true){
+            this.setState({ landingPage: !this.state.landingPage })    
+        }
     }
 
     generateRandomNumbers = props => {
