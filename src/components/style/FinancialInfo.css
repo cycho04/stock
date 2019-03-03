@@ -1,9 +1,18 @@
 .financialinfo {
     background-color: transparent !important;
- border: 2px black solid !important;
+ border: none !important;
  color: black !important;
 }
 
 .main {
     margin-bottom: 1.0em !important;
+}
+
+.top-title {
+    text-align: center !important;
+    padding-bottom: 2.5em !important;
+}
+
+.title {
+    font-weight: 900;
 }

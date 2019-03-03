@@ -11,7 +11,7 @@ const DisplayNews = props => {
     return(
         <div className='ui raised displaynews segment'>
             <div className={`ui black ribbon label`}>Recent News</div>
-            <div className='ui displaynews segment'>
+            <div className='ui displaynews segment inner'>
                 <div className='ui divided link items'>
                     {news.map((article, i) => 
                         <a key={article.url} className='item' href={article.url} target='_blank'>

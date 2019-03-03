@@ -1,8 +1,11 @@
 .segment {
     background-color: transparent !important;
- border: 2px black solid !important;
- color: black !important;
-    
+    border: 2px black solid !important;
+    color: black !important;
+}
+
+.inner {
+    border: none !important;
 }
 
 .displaynews-.items {

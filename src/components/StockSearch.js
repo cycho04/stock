@@ -5,12 +5,19 @@ import { connect } from 'react-redux';
 
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchChartInfo } from '../actions';
 import './style/StockSearch.css';
-import AutoCompleteWrapper from './AutoCompleteWrapper';
 
 class StockSearch extends React.Component {
-    
-
-    renderInput = formProps => <AutoCompleteWrapper formProps={formProps}/>;
+    renderInput = formProps => {
+        return(
+            <div>
+                    <input 
+                        {...formProps.input}
+                        placeholder='Search Stocks'
+                        autoComplete='off'
+                    />    
+                </div>
+        )
+    }
 
     onSubmit = (formValues) => {
         //check for blank submission.

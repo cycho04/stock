@@ -24,52 +24,52 @@ const StockStatistics = props => {
                 <table className='ui single line stockstatistics table' align='center'>
                     <thead>
                         <tr>
-                            <th className='stockstatistics' colSpan='4'>
+                            <th className='stockstatistics top-title' colSpan='4'>
                                 Report Date - 'Need Fix'
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Open</td>
+                        <td className='title'>Open</td>
                         <td>{noValue(quoteInfo.open)}</td>
-                        <td>Close</td>
+                        <td className='title'>Close</td>
                         <td>{noValue(quoteInfo.close)}</td>
                     </tr>
                     <tr>
-                        <td>High</td>
+                        <td className='title'>High</td>
                         <td>{noValue(quoteInfo.high)}</td>
-                        <td>Low</td>
+                        <td className='title'>Low</td>
                         <td>{noValue(quoteInfo.low)}</td>
                     </tr>
                     <tr>
-                        <td>Latest Source</td>
+                        <td className='title'>Latest Source</td>
                         <td>{quoteInfo.latestSource}</td>
-                        <td>Latest Volume</td>
+                        <td className='title'>Latest Volume</td>
                         <td>{noValue(quoteInfo.latestVolume)}</td>
                     </tr>
                     <tr>
-                        <td>Previous Close</td>
+                        <td className='title'>Previous Close</td>
                         <td>{noValue(quoteInfo.previousClose)}</td>
-                        <td>Change</td>
+                        <td className='title'>Change</td>
                         <td>{noValue(quoteInfo.change)}</td>
                     </tr>
                     <tr>
-                        <td>Change %</td>
+                        <td className='title'>Change %</td>
                         <td>{noValue(quoteInfo.changePercent)}</td>
-                        <td>P/E Ratio</td>
+                        <td className='title'>P/E Ratio</td>
                         <td>{noValue(quoteInfo.peRatio)}</td>
                     </tr>
                     <tr>
-                        <td>Week 52 Low</td>
+                        <td className='title'>Week 52 Low</td>
                         <td>{noValue(quoteInfo.week52Low)}</td>
-                        <td>Week 52 High</td>
+                        <td className='title'>Week 52 High</td>
                         <td>{noValue(quoteInfo.week52High)}</td>
                     </tr>
                     <tr>
-                        <td>Market Cap</td>
+                        <td className='title'>Market Cap</td>
                         <td>{noValue(quoteInfo.marketCap)}</td>
-                        <td>Year to Date Change</td>
+                        <td className='title'>Year to Date Change</td>
                         <td>{noValue(quoteInfo.ytdChange)}</td>
                     </tr>
                 </tbody>

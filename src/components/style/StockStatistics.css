@@ -1,7 +1,16 @@
 .stockstatistics {
     background-color: transparent !important;
- border: 2px black solid !important;
- color: black !important;
+    border: none !important;
+    color: black !important;
+}
+
+.title {
+    font-weight: 900;
+}
+
+.top-title {
+    text-align: center !important;
+    padding-bottom: 2.5em !important;
 }
 
 td {
