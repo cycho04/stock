@@ -45,7 +45,6 @@ class App extends React.Component {
     render(){
         return(
             <div className='app'>
-             
                     <LandingPage landingPage={this.state.landingPage} initialAnimation={this.initialAnimation}/>
                     {!this.state.landingPage ? <Body landingPage={this.state.landingPage}/> : <div></div>}
             </div>
