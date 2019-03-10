@@ -1,4 +1,4 @@
-## Learn About Stocks!
+## Financial Stock Encyclopedia
 
 - Live Demo: [Stock App](https://my-stocks.herokuapp.com/)
 
@@ -13,6 +13,7 @@
 - Click any of the random stocks to see more info.
 
 ### Video Walkthrough
+![Stock Gif](stock.gif)
 
 ### Technical Information
 
@@ -23,4 +24,6 @@
 - HTTP requests made with `axios`.
 
 - `Redux` for state management.
+
+- Animations with `react-transition-group`
 
