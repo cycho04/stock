@@ -13,6 +13,7 @@
 - Click any of the random stocks to see more info.
 
 ### Video Walkthrough
+![Stock Gif](stock.gif)
 
 ### Technical Information
 
