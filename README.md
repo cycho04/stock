@@ -1,4 +1,4 @@
-## Learn About Stocks!
+## Financial Stock Encyclopedia
 
 - Live Demo: [Stock App](https://my-stocks.herokuapp.com/)
 
@@ -23,4 +23,6 @@
 - HTTP requests made with `axios`.
 
 - `Redux` for state management.
+
+- Animations with `react-transition-group`
 
