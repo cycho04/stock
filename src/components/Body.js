@@ -1,5 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
+
 import Chart from './Chart';
 import StockDetails from './StockDetails';
 import MainDisplay from './MainDisplay';

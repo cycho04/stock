@@ -1,17 +1,18 @@
 /* all three used to keep the entire app background same color */
 html {
-    background-image: linear-gradient(to left, #abbaab , #ffffff);
-    color: #6B6E70;
+    /* background-image: linear-gradient(to left, #abbaab , #ffffff);
+    color: #6B6E70; */
+    background-color: 
 }
 body {
-    background-image: linear-gradient(to left, #abbaab , #ffffff);
-    color: #6B6E70;
+    /* background-image: linear-gradient(to left, #abbaab , #ffffff);
+    color: #6B6E70; */
 }
 
 .app {
-    background-image: linear-gradient(to left, #abbaab , #ffffff);
+    /* background-image: linear-gradient(to left, #abbaab , #ffffff);
     color: #6B6E70;
-    height: 100vh !important;
+    height: 100vh !important; */
 }
 
 

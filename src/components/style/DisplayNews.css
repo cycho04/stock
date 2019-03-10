@@ -11,3 +11,8 @@
 .displaynews-.items {
     border-color: white !important;
 }
+
+.topbanner {
+    padding-top: 6.0em;
+    padding-bottom: 2.0em;
+}

@@ -8,9 +8,9 @@
     font-weight: 900;
 }
 
-.top-title {
-    text-align: center !important;
-    padding-bottom: 2.5em !important;
+.topbanner {
+    padding-top: 6.0em;
+    padding-bottom: 2.0em;
 }
 
 td {

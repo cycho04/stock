@@ -7,7 +7,7 @@ import './style/App.css';
 import Body from './Body';
 
 import LandingPage from './LandingPage';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import Calendar from './Calendar';
 
 import Test from './Test';
 
@@ -46,7 +46,7 @@ class App extends React.Component {
         return(
             <div className='app'>
                     <LandingPage landingPage={this.state.landingPage} initialAnimation={this.initialAnimation}/>
-                    {!this.state.landingPage ? <Body landingPage={this.state.landingPage}/> : <div></div>}
+                    {!this.state.landingPage ? <Body landingPage={this.state.landingPage}/> : <Calendar landingPage={this.state.landingPage}/>}
             </div>
         )
     }

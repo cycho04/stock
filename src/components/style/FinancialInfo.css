@@ -16,3 +16,8 @@
 .title {
     font-weight: 900;
 }
+
+.topbanner {
+    padding-top: 6.0em;
+    padding-bottom: 2.0em;
+}

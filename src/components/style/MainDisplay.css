@@ -25,3 +25,7 @@
 .largePrice {
     font-size: 5.0em;
 }
+
+.percent {
+    font-size: 2.0em !important;
+}
