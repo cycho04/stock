@@ -2,7 +2,6 @@ import React from 'react';
 import FeaturedStocks from  './FeaturedStocks';
 import StockSearch from './StockSearch';
 
-import './style/LandingPage.css';
 
 
 class LandingPage extends React.Component {
