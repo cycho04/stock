@@ -23,3 +23,10 @@
 .grid {
     border-style: none !important;
 }
+
+@media screen and (max-width: 50em){
+    .transparent {
+        padding-top: 0 !important;
+        padding-bottom: 0!important;
+    }
+}

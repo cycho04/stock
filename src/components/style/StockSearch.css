@@ -15,3 +15,7 @@
     background-color: transparent;
     font-family: 'Staatliches', cursive;
 }
+
+.responsive {
+    width: 100% !important;
+}

@@ -21,3 +21,13 @@
     padding-top: 6.0em;
     padding-bottom: 2.0em;
 }
+
+
+@media screen and (min-width: 50em){
+    td {
+        width: 25% !important;
+    }
+    table {
+        text-align: center !important;
+    }
+}

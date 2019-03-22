@@ -20,7 +20,7 @@ const FinancialInfo = props => {
             <div className='ui horizontal divider topbanner'>FINANCIALS</div>
             <div className='ui raised financialinfo main segment'>
             <div className={`ui black ribbon label`}>Reported Date:  {financialInfo.reportDate}</div>
-                <table className='ui single line financialinfo table' align='center'>
+                <table className='ui financialinfo' align='center'>
                     <tbody>
                         <tr>
                             <td className='title'>Cash Flow </td>

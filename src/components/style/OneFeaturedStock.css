@@ -1,6 +1,17 @@
 /* Responsive */
-@media screen and (max-width: 600px){
-    .header {
-        color: purple !important;
+@media screen and (max-width: 50em){
+    .column {
+        margin: auto !important;
+        width: 100% !important;
+        padding-bottom: 0 !important;
+    }
+    .header{
+        width: 50% !important;
+        margin: none !important;
+        float: left !important;
+    }
+    .context{
+        width: 50% !important;
+        margin: none !important;
     }
 }

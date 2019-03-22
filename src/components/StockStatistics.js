@@ -23,7 +23,7 @@ const StockStatistics = props => {
 
             <div className='ui raised stockstatistics segment'>
                 <div className={`ui black ribbon label`}>Reported Date - 'Need Fix'</div>
-                    <table className='ui single line stockstatistics table' align='center'>
+                    <table className='ui single line stockstatistics' align='center'>
                         <tbody>
                         <tr>
                             <td className='title'>Open</td>

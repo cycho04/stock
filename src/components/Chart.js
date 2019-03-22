@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs';
 import { connect } from 'react-redux';
+import './style/Chart.css';
 
 const Chart = props => {
     //checks if the data is fetch, else the array length is 0
@@ -32,7 +33,7 @@ const Chart = props => {
 
         }
         return (
-            <Line data={data} options={options} width='1100' height='500'/>
+            <Line className='mobile' data={data} options={options} width='1100' height='500'/>
         )    
     }
     return <div>No Chart</div>

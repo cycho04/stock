@@ -11,6 +11,8 @@ class StockSearch extends React.Component {
         return(
             <div>
                     <input 
+                        width='1000'
+                        className='responsive'
                         {...formProps.input}
                         placeholder='Search Stocks'
                         autoComplete='off'
