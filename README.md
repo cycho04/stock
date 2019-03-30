@@ -15,7 +15,7 @@
 ### Video Walkthrough
 ![Stock Gif](stock.gif)
 
-### Technical Information
+### Environment
 
 - Powered by the `IEX API`.
 
