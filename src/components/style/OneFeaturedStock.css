@@ -1,5 +1,15 @@
+
+.border {
+    border-top: 2px solid white !important;
+    border-bottom: 2px solid white !important;
+    padding-top: 1.0em;
+    padding-bottom: 1.0em;
+}
 /* Responsive */
 @media screen and (max-width: 50em){
+    .border{
+        border-top: 0 !important;
+    }
     .column {
         margin: auto !important;
         width: 100% !important;

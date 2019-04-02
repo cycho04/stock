@@ -20,7 +20,7 @@ class OneFeaturedStock extends React.Component {
     render(){
         return (
             <div key={this.props.i} className='column'>
-                <div className='ui fluid card center individual' onClick={this.handleClick}>
+                <div className='ui fluid center individual border' onClick={this.handleClick}>
                     <div className='content'>
                         <div className='header individual'>{this.props.state.symbols.symbols.data[this.props.randomNum].symbol}</div> 
                         <div className='overflow individual context'>{this.props.state.symbols.symbols.data[this.props.randomNum].name ? this.props.state.symbols.symbols.data[this.props.randomNum].name : 'N/A'}</div>

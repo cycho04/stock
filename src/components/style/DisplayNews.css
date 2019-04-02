@@ -1,6 +1,5 @@
 .segment {
     background-color: transparent !important;
-    border: 2px black solid !important;
     color: black !important;
 }
 
@@ -10,6 +9,12 @@
 
 .displaynews-.items {
     border-color: white !important;
+}
+.displaynews {
+    color: #cccccc !important;
+}
+.meta{
+    color: #cccccc !important;
 }
 
 .topbanner {

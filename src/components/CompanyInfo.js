@@ -8,16 +8,15 @@ const CompanyInfo = props => {
 
     return(
         <div>
-            <div className='ui horizontal divider topbanner'>ABOUT</div>
-            <div className='ui raised companyinfo segment'>
+            <div className='ui horizontal divider topbanner'><h2>ABOUT</h2></div>
+            <div className='ui companyinfo'>
                 <div className='center'>
                     <div>{companyInfo.industry}</div>
                     <div>{companyInfo.exchange}</div>  
                     <div>CEO: {companyInfo.CEO}</div>    
                     <a target='_blank'href={companyInfo.website}>Visit their Website</a> 
                 </div>
-                <div className="ui divider"></div>
-                <div>{companyInfo.description}</div>
+                <div className='center'>{companyInfo.description}</div>
             </div>    
         </div>
         

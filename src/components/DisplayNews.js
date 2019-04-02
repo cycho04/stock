@@ -10,9 +10,9 @@ const DisplayNews = props => {
     
     return(
         <div>
-            <div className='ui horizontal divider topbanner'>RECENT NEWS</div>
-            <div className='ui raised displaynews segment'>
-                <div className='ui displaynews segment inner'>
+            <div className='ui horizontal divider topbanner'><h2>RECENT NEWS</h2></div>
+            <div className='displaynews'>
+                <div className='displaynews inner'>
                     <div className='ui divided link items'>
                         {news.map((article, i) => 
                             <a key={article.url} className='item' href={article.url} target='_blank'>

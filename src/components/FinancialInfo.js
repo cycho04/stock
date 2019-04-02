@@ -17,9 +17,8 @@ const FinancialInfo = props => {
     const financialInfo = props.state.financial.financial.financials ? props.state.financial.financial.financials[0] : '';
     return(
         <div>
-            <div className='ui horizontal divider topbanner'>FINANCIALS</div>
-            <div className='ui raised financialinfo main segment'>
-            <div className={`ui black ribbon label`}>Reported Date:  {financialInfo.reportDate}</div>
+            <div className='ui horizontal divider topbanner'><h2>FINANCIALS</h2></div>
+            <div className='ui financialinfo main'>
                 <table className='ui financialinfo' align='center'>
                     <tbody>
                         <tr>

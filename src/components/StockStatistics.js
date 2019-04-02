@@ -19,10 +19,9 @@ const StockStatistics = props => {
 
     return (
         <div>
-            <div className='ui horizontal divider topbanner'>STATISTICS</div>
+            <div className='ui horizontal divider topbanner'><h2>STATISTICS</h2></div>
 
-            <div className='ui raised stockstatistics segment'>
-                <div className={`ui black ribbon label`}>Reported Date - 'Need Fix'</div>
+            <div className='ui stockstatistics'>
                     <table className='ui single line stockstatistics' align='center'>
                         <tbody>
                         <tr>

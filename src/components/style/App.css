@@ -1,12 +1,8 @@
 
 body {
-
-    /* background-image: radial-gradient(circle, #eef2f3,#8e9eab); */
     background-image: radial-gradient(circle closest-side,#485563,#29323c );
     background-attachment: fixed;
-    color: #6B6E70;
 }
-
 
 
 

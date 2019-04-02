@@ -1,15 +1,16 @@
 .center {
     text-align: center;
+    color: #cccccc !important;
 }
 
 .companyinfo {
     background-color: transparent !important;
- border: 2px black solid !important;
- color: black !important;
- margin-top: 1.0em !important;
+    border: none !important;
+    margin-top: 1.0em !important;
 }
 
 .topbanner {
+    color: #cccccc !important;
     padding-top: 6.0em;
     padding-bottom: 2.0em;
 }
