@@ -14,10 +14,10 @@ const Chart = props => {
                 {
                     label: "My First dataset",
                     fillColor: "transparent",
-                    strokeColor: "green",
-                    pointColor: "green",
-                    pointStrokeColor: "#fff",
-                    pointHighlightFill: "#fff",
+                    strokeColor: "white",
+                    pointColor: "white",
+                    pointStrokeColor: "white",
+                    pointHighlightFill: "white",
                     pointHighlightStroke: "rgba(220,220,220,1)",
                     data: closePrices
                 }
@@ -26,11 +26,12 @@ const Chart = props => {
         const options = {
             responsive: true,
             maintainAspectRatio: true,
-            scaleGridLineColor: '#474B4F',
+            scaleGridLineColor: 'white',
             scaleGridLineWidth: 0,
-            datasetStrokeWidth: 10,
-            scaleShowGridLines: false
-
+            datasetStrokeWidth: 3,
+            scaleShowGridLines: false,
+            scaleFontColor: 'white',
+            scaleLineColor: 'white'
         }
         return (
             <Line className='mobile' data={data} options={options} width='1100' height='500'/>

@@ -9,11 +9,11 @@ const MainDisplay = (props) => {
     const plusSign = props.change >= 0 ? '+' : '';
 
     return(
-        <div className={`ui segment center maindisplay ${upOrDown}`}>
+        <div className={`ui center maindisplay`}>
             <div><span className='large'>{props.state.company.company.companyName}</span></div>
             <div>{props.symbol}</div>
             <h1 className='largePrice'>$ {(props.price).toFixed(2)}</h1>
-            <h3 className='percent'>{plusSign}{(props.change).toFixed(3)} ({plusSign}{(props.changePercent).toFixed(3)}%)</h3>
+            <h3 className={`percent ${upOrDown}`}>{plusSign}{(props.change).toFixed(3)} ({plusSign}{(props.changePercent).toFixed(3)}%)</h3>
         </div>
     )
 };
