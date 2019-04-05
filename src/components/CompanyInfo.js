@@ -7,7 +7,7 @@ const CompanyInfo = props => {
     const companyInfo = props.state.company.company;
 
     return(
-        <div>
+        <div className='page'>
             <div className='ui horizontal divider topbanner'><h2>ABOUT</h2></div>
             <div className='ui companyinfo'>
                 <div className='center'>

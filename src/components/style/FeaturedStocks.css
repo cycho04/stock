@@ -3,7 +3,7 @@
 }
 
 .transparent {
-    background-color: transparent !important;
+    background-image: linear-gradient(to right,#141E30, #243B55) !important;
     margin-top: 0 !important;
     border-style: none !important;
     
