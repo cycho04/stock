@@ -1,6 +1,8 @@
+import { CHART } from '../actions/types';
+
 export default (state=[], action) => {
     switch(action.type){
-        case('CHART'):
+        case CHART:
             return action.payload;
         default:
             return state;

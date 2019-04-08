@@ -1,0 +1,9 @@
+export const COMPANY_INFO = 'COMPANY_INFO';
+export const FINANCIAL_INFO = 'FINANCIAL_INFO';
+export const QUOTE_INFO = 'QUOTE_INFO';
+export const NEWS_INFO = 'NEWS_INFO';
+export const IMAGES = 'IMAGES';
+export const SYMBOLS = 'SYMBOLS';
+export const RANDOM = 'RANDOM';
+export const RANDOM_NUMBERS = 'RANDOM_NUMBERS';
+export const CHART = 'CHART';

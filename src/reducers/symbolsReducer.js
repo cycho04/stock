@@ -1,6 +1,8 @@
+import { SYMBOLS } from '../actions/types';
+
 export default (state=[], action) => {
     switch(action.type){
-        case('SYMBOLS'):
+        case SYMBOLS:
             return {...state, symbols: action.payload};
         default:
             return state;

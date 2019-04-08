@@ -1,10 +1,21 @@
 import IEX from '../apis/IEX';
 import unsplash from '../apis/unsplash';
+import { 
+    COMPANY_INFO, 
+    FINANCIAL_INFO, 
+    QUOTE_INFO, 
+    NEWS_INFO, 
+    IMAGES, 
+    SYMBOLS, 
+    RANDOM, 
+    RANDOM_NUMBERS, 
+    CHART 
+} from '../actions/types';
 
 export const fetchCompanyInfo = (data) => async dispatch => {
     const companyInfo = await IEX.get(`/stock/${data}/company`);
     dispatch({
-        type: 'COMPANY_INFO',
+        type: COMPANY_INFO,
         payload: companyInfo.data
     })
 };
@@ -12,7 +23,7 @@ export const fetchCompanyInfo = (data) => async dispatch => {
 export const fetchFinancialInfo = (data) => async dispatch => {
     const financialInfo = await IEX.get(`/stock/${data}/financials`);
     dispatch({
-        type: 'FINANCIAL_INFO',
+        type: FINANCIAL_INFO,
         payload: financialInfo.data
     })
 };
@@ -24,7 +35,7 @@ export const fetchQuoteInfo = (data) => async dispatch => {
         }
     });
     dispatch({
-        type: 'QUOTE_INFO',
+        type: QUOTE_INFO,
         payload: quoteInfo.data
     })
 };
@@ -32,7 +43,7 @@ export const fetchQuoteInfo = (data) => async dispatch => {
 export const fetchNews = (data) => async dispatch => {
     const newsInfo = await IEX.get(`/stock/${data}/news`);
     dispatch({ 
-        type: 'NEWS_INFO', 
+        type: NEWS_INFO, 
         payload: newsInfo.data
     })
 }
@@ -45,7 +56,7 @@ export const fetchImages = (num) => async dispatch => {
         }
     })
     dispatch({
-        type: 'IMAGES',
+        type: IMAGES,
         payload: images
     })
 };
@@ -53,24 +64,24 @@ export const fetchImages = (num) => async dispatch => {
 export const fetchSymbols = (x, y) => async dispatch => {
     await IEX.get('/ref-data/symbols')
     .then((symbols) => dispatch({
-        type: 'SYMBOLS',
+        type: SYMBOLS,
         payload: symbols
     }))
     .then((symbols) => dispatch({
-        type: 'RANDOM',
+        type: RANDOM,
         payload: symbols.payload.data.length - 1
     }))
     .then((symbols) => dispatch({
-        type: 'RANDOM_NUMBERS',
+        type: RANDOM_NUMBERS,
         payload: y(symbols.payload)
     }))
-    //dispatches a second action, insteadof its own action creator to prevent over fetching. else times out.
+    //dispatches a second action, instead of its own action creator to prevent over fetching. else times out.
 }
 
 export const fetchChartInfo = symbol => async dispatch => {
     const chartInfo = await IEX.get(`/stock/${symbol}/chart/1m`);
     dispatch({ 
-        type: 'CHART',
+        type: CHART,
         payload: chartInfo.data
     })
 }

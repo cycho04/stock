@@ -1,6 +1,8 @@
+import { RANDOM_NUMBERS } from '../actions/types';
+
 export default (state = [], action) => {
     switch(action.type){
-        case 'RANDOM_NUMBERS':
+        case RANDOM_NUMBERS:
             return [...state, action.payload ];
         default:
             return state;
