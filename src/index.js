@@ -9,7 +9,7 @@ import reducers from './reducers'
 import App from './components/App';
 
 
-
+//Redux dev tools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const enhancer = composeEnhancers(applyMiddleware(thunk));

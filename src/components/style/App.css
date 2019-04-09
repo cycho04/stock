@@ -51,13 +51,3 @@ body {
     height: 100px;
     transition: all 500ms linear;
 }
-
-/*
-colors for negative
-
-    background-image: linear-gradient(to right, #3a1c71 , #d76d77 , #ffaf7b);
-#F05F57, #360940 
-
-colors for positive
-#ffd89b , #19547b
-*/

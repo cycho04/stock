@@ -1,13 +1,13 @@
 import React from 'react';
 import { Line } from 'react-chartjs';
 import { connect } from 'react-redux';
-import './style/Chart.css';
 
-const Chart = props => {
+const Chart = ({ chart }) => {
+
     //checks if the data is fetch, else the array length is 0
-    if(props.state.chart.length > 1){
-        const dates = props.state.chart.map(info => info.date);
-        const closePrices = props.state.chart.map(info => info.close);
+    if(chart.length > 1){
+        const dates = chart.map(info => info.date); //x axis
+        const closePrices = chart.map(info => info.close); // y axis
         const data = {
             labels: dates,
             datasets: [
@@ -43,7 +43,7 @@ const Chart = props => {
 
 const mapStateToProps = state => {
     return {
-        state: state
+        chart: state.chart
     }
 }
 
