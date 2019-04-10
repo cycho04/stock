@@ -1,11 +1,35 @@
 import React from 'react';
 import { connect } from  'react-redux';
+import styled from 'styled-components';
 
-import './style/FinancialInfo.css';
+
+const Wrapper = styled.div`
+    background-color: transparent !important;
+    border: none !important;
+    color: black !important;
+    margin-bottom: 1.0em !important;
+    @media (min-width: 50em){
+        td {
+            width: 25% !important;
+        }
+        table {
+            text-align: center !important;
+        }
+    }
+`
+
+const Banner = styled.div`
+    padding-top: 6.0em;
+    padding-bottom: 2.0em;
+`
+
+const Title = styled.td`
+    font-weight: 900;
+`
 
 const FinancialInfo = props => {
 
-    //used to display N/A if no financial data
+    //used to display N/A if no financial data and format 
     const checkValue = value => {
         if (value){
             return Number(value).toLocaleString();
@@ -13,73 +37,76 @@ const FinancialInfo = props => {
         return <div>N/A</div>;    
     }
     
-    //added conditional, for etfs and other stocks with no financial info, else error
+    //for etfs and other stocks with no financial info, else error
     const financialInfo = props.state.financial.financial.financials ? props.state.financial.financial.financials[0] : '';
+
+
     return(
         <div>
-            <div className='ui horizontal divider topbanner'><h2>FINANCIALS</h2></div>
-            <div className='ui financialinfo main'>
-                <table className='ui financialinfo' align='center'>
+            <Banner className='ui horizontal divider'>
+                <h2>FINANCIALS</h2>
+            </Banner>
+            <Wrapper>
+                <table align='center'>
                     <tbody>
                         <tr>
-                            <td className='title'>Cash Flow </td>
+                            <Title>Cash Flow </Title>
                             <td>{checkValue(financialInfo.cashFlow)}</td>
-                            <td className='title'>Gross Profit </td>
+                            <Title>Gross Profit </Title>
                             <td>{checkValue(financialInfo.grossProfit)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Cost of Revenue </td>
+                            <Title>Cost of Revenue </Title>
                             <td>{checkValue(financialInfo.costOfRevenue)}</td>
-                            <td className='title'>Operating Revenue </td>
+                            <Title>Operating Revenue </Title>
                             <td>{checkValue(financialInfo.operatingRevenue)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Total Revenue </td>
+                            <Title>Total Revenue </Title>
                             <td>{checkValue(financialInfo.totalRevenue)}</td>
-                            <td className='title'>Operating Income </td>
+                            <Title>Operating Income </Title>
                             <td>{checkValue(financialInfo.operatingIncome)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Net Income</td>
+                            <Title>Net Income</Title>
                             <td>{checkValue(financialInfo.netIncome)}</td>
-                            <td className='title'>Research and Development</td>
+                            <Title>Research and Development</Title>
                             <td>{checkValue(financialInfo.researchAndDevelopment)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Operating Expense</td>
+                            <Title>Operating Expense</Title>
                             <td>{checkValue(financialInfo.operatingExpense)}</td>
-                            <td className='title'>Current Assests</td>
+                            <Title>Current Assests</Title>
                             <td>{checkValue(financialInfo.currentAssets)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Total Assests</td>
+                            <Title>Total Assests</Title>
                             <td>{checkValue(financialInfo.totalAssets)}</td>
-                            <td className='title'>Total Liabilities</td>
+                            <Title>Total Liabilities</Title>
                             <td>{checkValue(financialInfo.totalLiabilities)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Current Cash </td>
+                            <Title>Current Cash </Title>
                             <td>{checkValue(financialInfo.currentCash)}</td>
-                            <td className='title'>Current Debt</td>
+                            <Title>Current Debt</Title>
                             <td>{checkValue(financialInfo.currentDebt)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Total Cash</td>
+                            <Title>Total Cash</Title>
                             <td>{checkValue(financialInfo.totalCash)}</td>
-                            <td className='title'>Total Debt</td>
+                            <Title>Total Debt</Title>
                             <td>{checkValue(financialInfo.totalDebt)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Shareholder Equity </td>
+                            <Title>Shareholder Equity </Title>
                             <td>{checkValue(financialInfo.shareholderEquity)}</td>
-                            <td className='title'>Cash Change </td>
+                            <Title>Cash Change </Title>
                             <td>{checkValue(financialInfo.cashChange)}</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>    
+            </Wrapper>    
         </div>
-        
     )
 };
 

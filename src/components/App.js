@@ -5,25 +5,25 @@ import { connect } from 'react-redux';
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchSymbols, fetchChartInfo } from '../actions';
 import './style/App.css';
 import Body from './Body';
-
 import LandingPage from './LandingPage';
 import Calendar from './Calendar';
 
-import Test from './Test';
+
 
 class App extends React.Component {
     //for transition purposes
     state={ landingPage: true }
 
     componentDidMount(){
-        const stock = 'AAPL'
-        this.props.fetchCompanyInfo(stock);
-        this.props.fetchFinancialInfo(stock);
-        this.props.fetchQuoteInfo(stock);
-        this.props.fetchNews(stock);
-        this.props.fetchImages(10);
-        this.props.fetchSymbols(this.props, this.generateRandomNumbers);
-        this.props.fetchChartInfo(stock);
+        // const stock = 'AAPL'
+        // this.props.fetchCompanyInfo(stock);
+        // this.props.fetchFinancialInfo(stock);
+        // this.props.fetchQuoteInfo(stock);
+        // this.props.fetchNews(stock);
+        // this.props.fetchImages(10);
+        // this.props.fetchChartInfo(stock);
+        this.props.fetchSymbols(this.generateRandomNumbers);
+        
     }
     
 

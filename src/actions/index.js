@@ -12,6 +12,7 @@ import {
     CHART 
 } from '../actions/types';
 
+
 export const fetchCompanyInfo = (data) => async dispatch => {
     const companyInfo = await IEX.get(`/stock/${data}/company`);
     dispatch({
@@ -61,7 +62,7 @@ export const fetchImages = (num) => async dispatch => {
     })
 };
 
-export const fetchSymbols = (x, y) => async dispatch => {
+export const fetchSymbols = (y) => async dispatch => {
     await IEX.get('/ref-data/symbols')
     .then((symbols) => dispatch({
         type: SYMBOLS,

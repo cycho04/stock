@@ -1,20 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './style/MainDisplay.css';
+import styled from 'styled-components';
+
+
+const Wrapper = styled.div`
+    text-align: center;
+    background-color: transparent !important;
+    margin-top: 1.0em !important;
+    border: none !important;
+`
+
+const CompanyName = styled.div`
+    font-size: 2.5em;
+    font-family: 'Staatliches', cursive;
+`
+
+const Price = styled.h1`
+    font-size: 5.0em;
+`
+//Need to pass an property to this Component to access props in color
+const Percent = styled.h3`
+    color: ${props => props.change >= 0 ? 'green' : 'red'};
+    font-size: 2.0em !important;
+`
+
 
 const MainDisplay = (props) => {
-    console.log(props.price)
-
     const upOrDown = props.change >= 0 ? 'up' : 'down';
     const plusSign = props.change >= 0 ? '+' : '';
 
     return(
-        <div className={`ui center maindisplay`}>
-            <div><span className='large'>{props.state.company.company.companyName}</span></div>
+        <Wrapper>
+            <CompanyName>{props.state.company.company.companyName}</CompanyName>
             <div>{props.symbol}</div>
-            <h1 className='largePrice'>$ {(props.price).toFixed(2)}</h1>
-            <h3 className={`percent ${upOrDown}`}>{plusSign}{(props.change).toFixed(3)} ({plusSign}{(props.changePercent).toFixed(3)}%)</h3>
-        </div>
+            <Price>$ {(props.price).toFixed(2)}</Price>
+            <Percent change={props.change}>{plusSign}{(props.change).toFixed(3)} ({plusSign}{(props.changePercent).toFixed(3)}%)</Percent>
+        </Wrapper>
     )
 };
 

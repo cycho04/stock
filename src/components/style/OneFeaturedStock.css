@@ -25,3 +25,14 @@
         margin: none !important;
     }
 }
+
+.overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.individual {
+    background-color: transparent !important;
+    color: white !important;
+}
