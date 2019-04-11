@@ -1,7 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import styled from 'styled-components';
 
-import './style/StockStatistics.css'
+
+const Title = styled.div`
+    font-weight: 900;
+    font-size: 1.2em;
+`
+
+const Banner = styled.div`
+    padding-top: 6.0em;
+    padding-bottom: 2.0em;
+`
+
+const Wrapper = styled.div`
+    background-color: transparent !important;
+    border: none !important;
+    color: black !important;
+    td {
+        width: 25% !important;
+        padding-bottom: 1.0em;
+    }
+    table {
+        text-align: center !important;
+    }
+`
+
+
 
 const StockStatistics = props => {
 
@@ -19,56 +44,58 @@ const StockStatistics = props => {
 
     return (
         <div>
-            <div className='ui horizontal divider topbanner'><h2>STATISTICS</h2></div>
+            <Banner className='ui horizontal divider'>
+                <h2>STATISTICS</h2>
+            </Banner>
 
-            <div className='ui stockstatistics'>
-                    <table className='ui single line stockstatistics' align='center'>
+            <Wrapper>
+                    <table align='center'>
                         <tbody>
                         <tr>
-                            <td className='title'>Open</td>
+                            <Title>Open</Title>
                             <td>{noValue(quoteInfo.open)}</td>
-                            <td className='title'>Close</td>
+                            <Title>Close</Title>
                             <td>{noValue(quoteInfo.close)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>High</td>
+                            <Title>High</Title>
                             <td>{noValue(quoteInfo.high)}</td>
-                            <td className='title'>Low</td>
+                            <Title>Low</Title>
                             <td>{noValue(quoteInfo.low)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Latest Source</td>
+                            <Title>Latest Source</Title>
                             <td>{quoteInfo.latestSource}</td>
-                            <td className='title'>Latest Volume</td>
+                            <Title>Latest Volume</Title>
                             <td>{noValue(quoteInfo.latestVolume)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Previous Close</td>
+                            <Title>Previous Close</Title>
                             <td>{noValue(quoteInfo.previousClose)}</td>
-                            <td className='title'>Change</td>
+                            <Title>Change</Title>
                             <td>{noValue(quoteInfo.change)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Change %</td>
+                            <Title>Change %</Title>
                             <td>{noValue(quoteInfo.changePercent)}</td>
-                            <td className='title'>P/E Ratio</td>
+                            <Title>P/E Ratio</Title>
                             <td>{noValue(quoteInfo.peRatio)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Week 52 Low</td>
+                            <Title>Week 52 Low</Title>
                             <td>{noValue(quoteInfo.week52Low)}</td>
-                            <td className='title'>Week 52 High</td>
+                            <Title>Week 52 High</Title>
                             <td>{noValue(quoteInfo.week52High)}</td>
                         </tr>
                         <tr>
-                            <td className='title'>Market Cap</td>
+                            <Title>Market Cap</Title>
                             <td>{noValue(quoteInfo.marketCap)}</td>
-                            <td className='title'>Year to Date Change</td>
+                            <Title>Year to Date Change</Title>
                             <td>{noValue(quoteInfo.ytdChange)}</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>    
+            </Wrapper>    
         </div>
         
     )

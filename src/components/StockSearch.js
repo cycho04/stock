@@ -1,10 +1,30 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-
+import styled from 'styled-components';
 
 import { fetchCompanyInfo, fetchFinancialInfo, fetchQuoteInfo, fetchNews, fetchImages, fetchChartInfo } from '../actions';
-import './style/StockSearch.css';
+
+
+const Wrapper = styled.div`
+    background-color: transparent;
+    font-family: 'Staatliches', cursive;
+    text-align: center !important;
+`
+const Input = styled.input`
+    width: 30% !important;
+    @media (max-width: 50em){
+        width: 90% !important;
+    }
+`
+const Button = styled.button`
+    color: white !important;
+    background-color: ${props => props.change >= 0 ? 'green' : 'red'} !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 1.5em !important;
+    width: 20% !important;
+`
+
 
 class StockSearch extends React.Component {
     renderError = meta => {
@@ -19,13 +39,14 @@ class StockSearch extends React.Component {
         return(
             <div>
                 {this.renderError(formProps.meta)}
-                <input 
+                <Input 
                     width='1000'
                     className='responsive'
                     {...formProps.input}
                     placeholder='Search Stocks'
                     autoComplete='off'
-                />    
+                />
+                
             </div>
         )
     }
@@ -61,29 +82,26 @@ class StockSearch extends React.Component {
 
     render(){
         return(
-            <div className='ui padded grid banner'>
-                <div className='six wide column'>       
-                </div>
+            <Wrapper>
                 <form 
-                    className='ui form four wide column'
+                    className='ui form column'
                     onSubmit={this.props.handleSubmit(this.onSubmit)}
                 >
                     <Field 
                         name='stockSymbol' 
                         component={this.renderInput} 
                     />
-                    <button className={`ui fluid button ${this.props.state.quote.quote.change >= 0 ? 'green' : 'red'}`} onClick={this.handleClick}>Search</button>
+                    <Button className='ui button' change={this.props.change}  onClick={this.handleClick}>Search</Button>
                 </form>    
-                <div className={`six wide column ${this.props.state.quote.quote.change >= 0 ? 'up' : 'down'}`}>
-                </div>
-            </div>
+            </Wrapper>
         )
     }
 };
 
 const mapStateToProps = state => {
     return {
-        state: state
+        state: state,
+        change: state.quote.quote.change
     }
 }
 

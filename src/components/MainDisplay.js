@@ -13,12 +13,13 @@ const Wrapper = styled.div`
 const CompanyName = styled.div`
     font-size: 2.5em;
     font-family: 'Staatliches', cursive;
+    line-height: 1.0em;
 `
 
 const Price = styled.h1`
     font-size: 5.0em;
 `
-//Need to pass an property to this Component to access props in color
+//Need to pass a property to this Component to access props in color
 const Percent = styled.h3`
     color: ${props => props.change >= 0 ? 'green' : 'red'};
     font-size: 2.0em !important;

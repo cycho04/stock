@@ -8,13 +8,12 @@ const Wrapper = styled.div`
     border: none !important;
     color: black !important;
     margin-bottom: 1.0em !important;
-    @media (min-width: 50em){
-        td {
-            width: 25% !important;
-        }
-        table {
-            text-align: center !important;
-        }
+    td {
+        width: 25% !important;
+        padding-bottom: 1.0em;
+    }
+    table {
+        text-align: center !important;
     }
 `
 
@@ -24,6 +23,7 @@ const Banner = styled.div`
 `
 
 const Title = styled.td`
+    font-size: 1.2em;
     font-weight: 900;
 `
 
