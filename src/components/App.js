@@ -10,24 +10,16 @@ import {
   fetchSymbols,
   fetchChartInfo
 } from "../actions";
-import "./style/App.css";
 import Body from "./Body";
 import LandingPage from "./LandingPage";
 import Calendar from "./Calendar";
 
 class App extends React.Component {
-  //for transition purposes
   state = { landingPage: true };
 
   componentDidMount() {
     this.props.fetchSymbols(this.generateRandomNumbers);
   }
-
-  initialAnimation = () => {
-    if (this.state.landingPage === true) {
-      this.setState({ landingPage: !this.state.landingPage });
-    }
-  };
 
   generateRandomNumbers = props => {
     let randomNums = [];
@@ -38,9 +30,15 @@ class App extends React.Component {
     return randomNums;
   };
 
+  initialAnimation = () => {
+    if (this.state.landingPage === true) {
+      this.setState({ landingPage: !this.state.landingPage });
+    }
+  };
+
   render() {
     return (
-      <Fragment className="app">
+      <Fragment>
         <LandingPage
           landingPage={this.state.landingPage}
           initialAnimation={this.initialAnimation}

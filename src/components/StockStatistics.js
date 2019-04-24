@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-const Title = styled.div`
+const Title = styled.th`
   font-weight: 900;
   font-size: 1.2em;
 `;
@@ -46,50 +46,55 @@ const StockStatistics = props => {
 
       <Wrapper>
         <table align="center">
-          <tbody>
-            <tr>
-              <Title>Open</Title>
-              <td>{noValue(quoteInfo.open)}</td>
-              <Title>Close</Title>
-              <td>{noValue(quoteInfo.close)}</td>
-            </tr>
-            <tr>
-              <Title>High</Title>
-              <td>{noValue(quoteInfo.high)}</td>
-              <Title>Low</Title>
-              <td>{noValue(quoteInfo.low)}</td>
-            </tr>
-            <tr>
-              <Title>Latest Source</Title>
-              <td>{quoteInfo.latestSource}</td>
-              <Title>Latest Volume</Title>
-              <td>{noValue(quoteInfo.latestVolume)}</td>
-            </tr>
-            <tr>
-              <Title>Previous Close</Title>
-              <td>{noValue(quoteInfo.previousClose)}</td>
-              <Title>Change</Title>
-              <td>{noValue(quoteInfo.change)}</td>
-            </tr>
-            <tr>
-              <Title>Change %</Title>
-              <td>{noValue(quoteInfo.changePercent)}</td>
-              <Title>P/E Ratio</Title>
-              <td>{noValue(quoteInfo.peRatio)}</td>
-            </tr>
-            <tr>
-              <Title>Week 52 Low</Title>
-              <td>{noValue(quoteInfo.week52Low)}</td>
-              <Title>Week 52 High</Title>
-              <td>{noValue(quoteInfo.week52High)}</td>
-            </tr>
-            <tr>
-              <Title>Market Cap</Title>
-              <td>{noValue(quoteInfo.marketCap)}</td>
-              <Title>Year to Date Change</Title>
-              <td>{noValue(quoteInfo.ytdChange)}</td>
-            </tr>
-          </tbody>
+          <tr>
+            <Title>Open</Title>
+            <Title>Close</Title>
+            <Title>High</Title>
+            <Title>Low</Title>
+          </tr>
+          <tr>
+            <td>{noValue(quoteInfo.open)}</td>
+            <td>{noValue(quoteInfo.close)}</td>
+            <td>{noValue(quoteInfo.high)}</td>
+            <td>{noValue(quoteInfo.low)}</td>
+          </tr>
+          <tr>
+            <Title>Latest Source</Title>
+            <Title>Latest Volume</Title>
+            <Title>Previous Close</Title>
+            <Title>Change</Title>
+          </tr>
+          <tr>
+            <td>{quoteInfo.latestSource}</td>
+            <td>{noValue(quoteInfo.latestVolume)}</td>
+            <td>{noValue(quoteInfo.previousClose)}</td>
+
+            <td>{noValue(quoteInfo.change)}</td>
+          </tr>
+          <tr>
+            <Title>Change %</Title>
+            <Title>P/E Ratio</Title>
+            <Title>Week 52 Low</Title>
+            <Title>Week 52 High</Title>
+          </tr>
+          <tr>
+            <td>{noValue(quoteInfo.changePercent)}</td>
+            <td>{noValue(quoteInfo.peRatio)}</td>
+            <td>{noValue(quoteInfo.week52Low)}</td>
+            <td>{noValue(quoteInfo.week52High)}</td>
+          </tr>
+          <tr>
+            <Title>Market Cap</Title>
+            <Title />
+            <Title />
+            <Title>Year to Date Change</Title>
+          </tr>
+          <tr>
+            <td>{noValue(quoteInfo.marketCap)}</td>
+            <td />
+            <td />
+            <td>{noValue(quoteInfo.ytdChange)}</td>
+          </tr>
         </table>
       </Wrapper>
     </Fragment>

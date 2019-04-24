@@ -1,8 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
 
 import OneFeaturedStock from "./OneFeaturedStock";
+
+const fadeInAnimation = keyframes`${fadeIn}`;
 
 const Wrapper = styled.div`
   background-image: linear-gradient(to right, #141e30, #243b55) !important;
@@ -15,6 +18,8 @@ const Wrapper = styled.div`
       padding-bottom: 0 !important;
     }
   }
+
+  animation: 1s ${fadeInAnimation};
 `;
 
 const FeaturedStocks = props => {
@@ -38,7 +43,7 @@ const FeaturedStocks = props => {
       </Wrapper>
     );
   }
-  return <div>Loading...</div>;
+  return <div className="ui active centered inline loader" />;
 };
 
 const mapStateToProps = state => {

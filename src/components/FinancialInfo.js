@@ -21,7 +21,7 @@ const Banner = styled.div`
   padding-bottom: 2em;
 `;
 
-const Title = styled.td`
+const Title = styled.th`
   font-size: 1.2em;
   font-weight: 900;
 `;
@@ -47,62 +47,66 @@ const FinancialInfo = props => {
       </Banner>
       <Wrapper>
         <table align="center">
-          <tbody>
-            <tr>
-              <Title>Cash Flow </Title>
-              <td>{checkValue(financialInfo.cashFlow)}</td>
-              <Title>Gross Profit </Title>
-              <td>{checkValue(financialInfo.grossProfit)}</td>
-            </tr>
-            <tr>
-              <Title>Cost of Revenue </Title>
-              <td>{checkValue(financialInfo.costOfRevenue)}</td>
-              <Title>Operating Revenue </Title>
-              <td>{checkValue(financialInfo.operatingRevenue)}</td>
-            </tr>
-            <tr>
-              <Title>Total Revenue </Title>
-              <td>{checkValue(financialInfo.totalRevenue)}</td>
-              <Title>Operating Income </Title>
-              <td>{checkValue(financialInfo.operatingIncome)}</td>
-            </tr>
-            <tr>
-              <Title>Net Income</Title>
-              <td>{checkValue(financialInfo.netIncome)}</td>
-              <Title>Research and Development</Title>
-              <td>{checkValue(financialInfo.researchAndDevelopment)}</td>
-            </tr>
-            <tr>
-              <Title>Operating Expense</Title>
-              <td>{checkValue(financialInfo.operatingExpense)}</td>
-              <Title>Current Assests</Title>
-              <td>{checkValue(financialInfo.currentAssets)}</td>
-            </tr>
-            <tr>
-              <Title>Total Assests</Title>
-              <td>{checkValue(financialInfo.totalAssets)}</td>
-              <Title>Total Liabilities</Title>
-              <td>{checkValue(financialInfo.totalLiabilities)}</td>
-            </tr>
-            <tr>
-              <Title>Current Cash </Title>
-              <td>{checkValue(financialInfo.currentCash)}</td>
-              <Title>Current Debt</Title>
-              <td>{checkValue(financialInfo.currentDebt)}</td>
-            </tr>
-            <tr>
-              <Title>Total Cash</Title>
-              <td>{checkValue(financialInfo.totalCash)}</td>
-              <Title>Total Debt</Title>
-              <td>{checkValue(financialInfo.totalDebt)}</td>
-            </tr>
-            <tr>
-              <Title>Shareholder Equity </Title>
-              <td>{checkValue(financialInfo.shareholderEquity)}</td>
-              <Title>Cash Change </Title>
-              <td>{checkValue(financialInfo.cashChange)}</td>
-            </tr>
-          </tbody>
+          <tr>
+            <Title>Cash Flow </Title>
+            <Title>Gross Profit </Title>
+            <Title>Cost of Revenue </Title>
+            <Title>Operating Revenue </Title>
+          </tr>
+          <tr>
+            <td>{checkValue(financialInfo.cashFlow)}</td>
+            <td>{checkValue(financialInfo.grossProfit)}</td>
+            <td>{checkValue(financialInfo.costOfRevenue)}</td>
+            <td>{checkValue(financialInfo.operatingRevenue)}</td>
+          </tr>
+          <tr>
+            <Title>Total Revenue </Title>
+            <Title>Operating Income </Title>
+            <Title>Net Income</Title>
+            <Title>Research and Development</Title>
+          </tr>
+          <tr>
+            <td>{checkValue(financialInfo.totalRevenue)}</td>
+            <td>{checkValue(financialInfo.operatingIncome)}</td>
+            <td>{checkValue(financialInfo.netIncome)}</td>
+            <td>{checkValue(financialInfo.researchAndDevelopment)}</td>
+          </tr>
+          <tr>
+            <Title>Operating Expense</Title>
+            <Title>Current Assests</Title>
+            <Title>Total Assests</Title>
+            <Title>Total Liabilities</Title>
+          </tr>
+          <tr>
+            <td>{checkValue(financialInfo.operatingExpense)}</td>
+            <td>{checkValue(financialInfo.currentAssets)}</td>
+            <td>{checkValue(financialInfo.totalAssets)}</td>
+            <td>{checkValue(financialInfo.totalLiabilities)}</td>
+          </tr>
+          <tr>
+            <Title>Current Cash </Title>
+            <Title>Current Debt</Title>
+            <Title>Total Cash</Title>
+            <Title>Total Debt</Title>
+          </tr>
+          <tr>
+            <td>{checkValue(financialInfo.currentCash)}</td>
+            <td>{checkValue(financialInfo.currentDebt)}</td>
+            <td>{checkValue(financialInfo.totalCash)}</td>
+            <td>{checkValue(financialInfo.totalDebt)}</td>
+          </tr>
+          <tr>
+            <Title>Shareholder Equity </Title>
+            <Title />
+            <Title />
+            <Title>Cash Change </Title>
+          </tr>
+          <tr>
+            <td>{checkValue(financialInfo.shareholderEquity)}</td>
+            <td />
+            <td />
+            <td>{checkValue(financialInfo.cashChange)}</td>
+          </tr>
         </table>
       </Wrapper>
     </Fragment>

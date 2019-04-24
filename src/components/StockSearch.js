@@ -1,7 +1,8 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { fadeIn } from "react-animations";
 
 import {
   fetchCompanyInfo,
@@ -12,10 +13,13 @@ import {
   fetchChartInfo
 } from "../actions";
 
+const fadeInAnimation = keyframes`${fadeIn}`;
+
 const Wrapper = styled.div`
   background-color: transparent;
   font-family: "Staatliches", cursive;
   text-align: center !important;
+  animation: 2.5s ${fadeInAnimation};
 `;
 const Input = styled.input`
   width: 30% !important;
@@ -73,14 +77,6 @@ class StockSearch extends React.Component {
     }
   };
 
-  handleClick = () => {
-    if (this.props.state.form.stockSearch) {
-      if (this.props.state.form.stockSearch.values) {
-        this.props.initialAnimation();
-      }
-    }
-  };
-
   render() {
     return (
       <Wrapper>
@@ -89,11 +85,7 @@ class StockSearch extends React.Component {
           onSubmit={this.props.handleSubmit(this.onSubmit)}
         >
           <Field name="stockSymbol" component={this.renderInput} />
-          <Button
-            className="ui button"
-            change={this.props.change}
-            onClick={this.handleClick}
-          >
+          <Button className="ui button" change={this.props.change}>
             Search
           </Button>
         </form>
