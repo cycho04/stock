@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
+import { flipInX } from "react-animations";
 
 import OneFeaturedStock from "./OneFeaturedStock";
 
-const fadeInAnimation = keyframes`${fadeIn}`;
+const flipInXAnimation = keyframes`${flipInX}`;
 
 const Wrapper = styled.div`
   background-image: linear-gradient(to right, #141e30, #243b55) !important;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     }
   }
 
-  animation: 1s ${fadeInAnimation};
+  animation: 0.5s ${flipInXAnimation};
 `;
 
 const FeaturedStocks = props => {

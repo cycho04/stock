@@ -2,7 +2,7 @@ import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
 import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
+import { flipInX } from "react-animations";
 
 import {
   fetchCompanyInfo,
@@ -13,13 +13,13 @@ import {
   fetchChartInfo
 } from "../actions";
 
-const fadeInAnimation = keyframes`${fadeIn}`;
+const flipInXAnimation = keyframes`${flipInX}`;
 
 const Wrapper = styled.div`
   background-color: transparent;
   font-family: "Staatliches", cursive;
   text-align: center !important;
-  animation: 2.5s ${fadeInAnimation};
+  animation: 1s ${flipInXAnimation};
 `;
 const Input = styled.input`
   width: 30% !important;
@@ -49,13 +49,16 @@ class StockSearch extends React.Component {
         {this.renderError(formProps.meta)}
         <Input
           width="1000"
-          className="responsive"
           {...formProps.input}
           placeholder="Search Stocks"
           autoComplete="off"
         />
       </div>
     );
+  };
+
+  handleClick = () => {
+    this.props.initialAnimation();
   };
 
   onSubmit = formValues => {
@@ -85,7 +88,11 @@ class StockSearch extends React.Component {
           onSubmit={this.props.handleSubmit(this.onSubmit)}
         >
           <Field name="stockSymbol" component={this.renderInput} />
-          <Button className="ui button" change={this.props.change}>
+          <Button
+            onClick={this.handleClick}
+            className="ui button"
+            change={this.props.change}
+          >
             Search
           </Button>
         </form>

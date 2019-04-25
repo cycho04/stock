@@ -1,15 +1,15 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import styled, { keyframes } from "styled-components";
-import { fadeIn } from "react-animations";
+import { bounceInUp } from "react-animations";
 
-const fadeInAnimations = keyframes`${fadeIn}`;
+const bounceInUpAnimations = keyframes`${bounceInUp}`;
 
 const Wrapper = styled.div`
   text-align: center !important;
   font-size: 3em !important;
   line-height: 1em !important;
-  animation: 2s ${fadeInAnimations};
+  animation: 2s ${bounceInUpAnimations};
 `;
 
 class Calendar extends React.Component {
