@@ -1,4 +1,4 @@
-import IEX from '../apis/IEX';
+import API from '../apis/API';
 import unsplash from '../apis/unsplash';
 import { 
     COMPANY_INFO, 
@@ -14,7 +14,7 @@ import {
 
 
 export const fetchCompanyInfo = (data) => async dispatch => {
-    const companyInfo = await IEX.get(`/stock/${data}/company`);
+    const companyInfo = await API.get(`/stock/${data}/company`);
     dispatch({
         type: COMPANY_INFO,
         payload: companyInfo.data
@@ -22,7 +22,7 @@ export const fetchCompanyInfo = (data) => async dispatch => {
 };
 
 export const fetchFinancialInfo = (data) => async dispatch => {
-    const financialInfo = await IEX.get(`/stock/${data}/financials`);
+    const financialInfo = await API.get(`/stock/${data}/financials`);
     dispatch({
         type: FINANCIAL_INFO,
         payload: financialInfo.data
@@ -30,7 +30,7 @@ export const fetchFinancialInfo = (data) => async dispatch => {
 };
 
 export const fetchQuoteInfo = (data) => async dispatch => {
-    const quoteInfo = await IEX.get(`/stock/${data}/quote`, {
+    const quoteInfo = await API.get(`/stock/${data}/quote`, {
         params: {
             displayPercent: true
         }
@@ -42,7 +42,7 @@ export const fetchQuoteInfo = (data) => async dispatch => {
 };
 
 export const fetchNews = (data) => async dispatch => {
-    const newsInfo = await IEX.get(`/stock/${data}/news`);
+    const newsInfo = await API.get(`/stock/${data}/news`);
     dispatch({ 
         type: NEWS_INFO, 
         payload: newsInfo.data
@@ -63,7 +63,7 @@ export const fetchImages = (num) => async dispatch => {
 };
 
 export const fetchSymbols = (y) => async dispatch => {
-    await IEX.get('/ref-data/symbols')
+    await API.get('/ref-data/symbols')
     .then((symbols) => dispatch({
         type: SYMBOLS,
         payload: symbols
@@ -80,7 +80,7 @@ export const fetchSymbols = (y) => async dispatch => {
 }
 
 export const fetchChartInfo = symbol => async dispatch => {
-    const chartInfo = await IEX.get(`/stock/${symbol}/chart/1m`);
+    const chartInfo = await API.get(`/stock/${symbol}/chart/1m`);
     dispatch({ 
         type: CHART,
         payload: chartInfo.data

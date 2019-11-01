@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
+import API from '../apis/API';
 
 import {} from "../actions";
 import Body from "./Body";
@@ -10,7 +11,8 @@ class App extends React.Component {
   state = { landingPage: true };
 
   componentDidMount() {
-    
+    API.get(`/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=8QBZDOU3TZQI8IYA`)
+    .then(res => console.log(res))
   }
 
   generateRandomNumbers = props => {
