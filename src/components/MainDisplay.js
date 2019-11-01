@@ -25,18 +25,13 @@ const Percent = styled.h3`
 `;
 
 const MainDisplay = props => {
-  const upOrDown = props.change >= 0 ? "up" : "down";
-  const plusSign = props.change >= 0 ? "+" : "";
-
   return (
     <Wrapper>
-      <CompanyName>{props.state.company.company.companyName}</CompanyName>
-      <div>{props.symbol}</div>
-      <Price>$ {props.price.toFixed(2)}</Price>
-      <Percent change={props.change}>
-        {plusSign}
-        {props.change.toFixed(3)} ({plusSign}
-        {props.changePercent.toFixed(3)}%)
+      <CompanyName>company name</CompanyName>
+      <div>symbol</div>
+      <Price>$ price</Price>
+      <Percent>
+    
       </Percent>
     </Wrapper>
   );
@@ -44,22 +39,6 @@ const MainDisplay = props => {
 
 //had to add ternary below. side affect of adding react-router (something to do with passing down props in <Route />)
 const mapStateToProps = state => {
-  return {
-    symbol: state.quote.quote.symbol,
-    price:
-      typeof state.quote.quote.latestPrice === "string"
-        ? 0
-        : state.quote.quote.latestPrice,
-    change:
-      typeof state.quote.quote.change === "string"
-        ? 0
-        : state.quote.quote.change,
-    changePercent:
-      typeof state.quote.quote.changePercent === "string"
-        ? 0
-        : state.quote.quote.changePercent,
-    state: state
-  };
 };
 
 export default connect(mapStateToProps)(MainDisplay);
