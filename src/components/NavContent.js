@@ -16,6 +16,17 @@ const NavContent = () => {
     return(
         <StyledContainer maxWidth='xl'>
              <StyledTextField id="outlined-basic" label="Search" variant="outlined" />
+             <h2>Table of Contents</h2>
+
+             <h3>Stock Time Series</h3>
+             <h4>Intraday</h4>
+             <h4>Daily</h4>
+             <h4>Daily Adjusted</h4>
+
+             <h3>Technical Indicators</h3>
+             <h4>Simple Moving Avg</h4>
+             <h4>Exponential Moving Avg</h4>
+             <h4>Volume Weighted Avg Price</h4>
         </StyledContainer>
     )
 }

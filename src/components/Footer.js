@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="ui divider" />
       <div>
         <i className="copyright outline icon" />
-        Powered By IEX
+        Powered By Alpha Vantage
       </div>
     </StyledFooter>
   );

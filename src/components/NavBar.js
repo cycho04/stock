@@ -34,6 +34,7 @@ const StyledPermDrawer = styled(Drawer)`
     display: none;
     @media ${device.tablet}{
         display: flex;
+        min-width: 240px;
     }
 `
 
